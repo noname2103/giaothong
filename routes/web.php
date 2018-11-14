@@ -23,7 +23,5 @@ Route::post('login','UserController@PostLogin')->name('PostLogin');
 Route::get('register','UserController@ViewRegister')->name('ViewRegister');
 // Route gui thong tin den trang xu ly thong tin dang ky
 Route::post('register','UserController@PostRegister')->name('PostRegister');
-
-Route::get('test',function(){
-    return view('users.layout.navbar');
-});
+// Trang chu cua website
+Route::get('home','Usercontroller@ViewHome')->name('ViewHome');

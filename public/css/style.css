@@ -1,0 +1,251 @@
+.road{
+    width: 100%;
+    height: 6.5%;
+    position: relative;
+    position: fixed;
+    
+    bottom: 0px;
+    right: 0px;
+    background-image: url("../img/road3.jpg");
+    background-repeat: repeat-x; 
+    background-size:  13%;
+}
+.city{
+    width: 100%;
+    height: 6.5%;
+    position: fixed;
+    bottom: 5%;
+    right: 0px;
+    background-image: url("../img/tourbg.png");
+    background-repeat: repeat-x; 
+    background-size:  13%;
+}
+.newfeed{
+    margin-left: 18.5% !important;
+    height: 100%;
+    z-index: 2 !important;
+}
+.nav{
+    z-index: 3 !important;
+}
+a:hover{
+    text-decoration: none;
+}
+body{
+    background-color: rgb(233,243,252);
+    font-size: 15px !important;
+}
+.w-60{
+    width: 60% !important;
+}
+.post{
+   
+}
+.bot{
+    z-index: 1 !important;
+}
+
+@media screen and (max-width: 768px) {
+    .newfeed{
+        margin-left: 0px !important;
+    }
+}
+#status{
+	border: none;
+	resize: none;
+	font-size: 18px;
+}
+#status:focus{
+	outline: none;
+}
+.moto{
+    position: absolute;
+    bottom: 32px;
+    right: 50px;
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 25s; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    z-index: 2;
+}
+@keyframes example {
+    0%   {left:100%;}
+/*    25%  {left:200px;}
+    50%  {left:400px;}
+    75%  {left:600px;}*/
+    100% {left:-20%;}
+}
+.moto2{
+    position: absolute;
+    bottom: 3px;
+    right: 50px;
+    -webkit-animation-name: example-2; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 25s; /* Safari 4.0 - 8.0 */
+    animation-name: example-2;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    z-index: 4;
+}
+@keyframes example-2 {
+    0%   {left:-20%;}
+/*    25%  {left:200px;}
+    50%  {left:400px;}
+    75%  {left:600px;}*/
+    100% {left:100%;}
+}
+.car{
+    position: absolute;
+    bottom: 25px;
+    right: -70px;
+    -webkit-animation-name: example-car; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 20s; /* Safari 4.0 - 8.0 */
+    animation-name: example-car;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    z-index: 3;
+}
+
+@keyframes example-car {
+    0%   {left:100%;}
+/*    25%  {left:200px;}
+    50%  {left:400px;}
+    75%  {left:600px;}*/
+    100% {left:-20%;}
+}
+.police-car{
+    position: absolute;
+    bottom: 25px;
+    right: -70px;
+    -webkit-animation-name: example-car2; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 15s; /* Safari 4.0 - 8.0 */
+    animation-name: example-car2;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 7s;
+    z-index: 3;
+}
+
+@keyframes example-car2 {
+    0%   {left:100%;}
+/*    25%  {left:200px;}
+    50%  {left:400px;}
+    75%  {left:600px;}*/
+    100% {left:-20%;}
+}
+.car3{
+    position: absolute;
+    bottom: 17px;
+    left: -160px;
+    -webkit-animation-name: example-car3; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 21s; /* Safari 4.0 - 8.0 */
+    animation-name: example-car3;
+    animation-duration: 21s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 3s;
+    z-index: 3;
+}
+
+@keyframes example-car3 {
+    0%   {left:-20%;}
+/*    25%  {left:200px;}
+    50%  {left:400px;}
+    75%  {left:600px;}*/
+    100% {left:100%;}
+}
+.cotden{
+    position: absolute;
+    top: -59px;
+    right: 400px;
+    z-index: 1;
+}
+
+/**
+ * Checkbox Three
+ */
+ .checkboxThree {
+    width: 40px;
+    height: 20px;
+    background: #333;
+    border-radius: 50px;
+    position: relative;
+}
+
+/**
+ * Create the text for the On position
+ */
+ /* .checkboxThree:before {
+    content: 'On';
+    position: absolute;
+    top: 12px;
+    left: 13px;
+    height: 2px;
+    color: #26ca28;
+    font-size: 16px;
+} */
+
+/**
+ * Create the label for the off position
+ */
+ /* .checkboxThree:after {
+    content: 'Off';
+    position: absolute;
+    top: 12px;
+    left: 84px;
+    height: 2px;
+    color: #111;
+    font-size: 16px;
+} */
+
+/**
+ * Create the pill to click
+ */
+ .checkboxThree label {
+
+    width: 13px;
+    height: 13px;
+    border-radius: 50px;
+ 
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    transition: all .5s ease;
+    cursor: pointer;
+    position: absolute;
+    top: 3px;
+    z-index: 1;
+    left: 5px;
+    background: #ddd;
+}
+ 
+/**
+ * Create the checkbox event for the label
+ */
+.checkboxThree input[type=checkbox]:checked + label {
+    left: 20px;
+    background: #26ca28;
+}
+
+.shipper{
+    position: absolute;
+    top: -130px;
+    z-index: 1;
+    right: 10px;
+}
+.city2{
+    width: 100%;
+    height: 24%;
+    position: fixed;
+    bottom: 0%;
+    right: 0px;
+    background-image: url("../img/city2.png");
+    background-repeat: repeat-x; 
+    background-size:  20%;
+}

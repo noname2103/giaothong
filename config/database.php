@@ -33,12 +33,19 @@ return [
 
     'connections' => [
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> d08c968bf62666decd686eb2b1317ba61426a475
         'mongodb' => [
             'driver'   => 'mongodb',
             'host'     => 'localhost',
             'port'     => 27017,
+<<<<<<< HEAD
             'database' => 'giaothongdb',
+=======
+            'database' => 'owldb',
+>>>>>>> d08c968bf62666decd686eb2b1317ba61426a475
         ],
 
         'sqlite' => [

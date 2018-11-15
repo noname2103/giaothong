@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'mongodb'),
 
     /*
     |--------------------------------------------------------------------------
@@ -32,6 +32,14 @@ return [
     */
 
     'connections' => [
+
+
+        'mongodb' => [
+            'driver'   => 'mongodb',
+            'host'     => 'localhost',
+            'port'     => 27017,
+            'database' => 'giaothongdb',
+        ],
 
         'sqlite' => [
             'driver' => 'sqlite',

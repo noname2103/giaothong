@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 use App\Users;
+use App\Status;
 
 class UserController extends Controller
 {
@@ -73,7 +74,29 @@ class UserController extends Controller
     //Trang chu qua website
     public function ViewHome()
     {
-        return view('users.index.home');
+        $db = Status::all();
+        $author = Users::all();
 
+        return view('users.index.home',['status'=>$db,'author'=>$author]);
+
+    }
+    //Dang xuat tai khoan
+    public function logout(Request $request)
+    {
+        $request->session()->flush();
+        return redirect()->route('ViewHome');
+    }
+    //Dang tai mot bai viet len newfeed
+    public function upstt(Request $request)
+    {
+        $content = $request->contentstt;
+
+        $db = new Status;
+        $db->content = $content;
+        $db->author = session('iduser');
+        $db->time = date('d-m-Y H:i:s');
+        $db->save();
+
+        return redirect()->route('ViewHome');
     }
 }

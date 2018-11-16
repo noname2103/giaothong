@@ -24,5 +24,9 @@ Route::get('register','UserController@ViewRegister')->name('ViewRegister');
 // Route gui thong tin den trang xu ly thong tin dang ky
 Route::post('register','UserController@PostRegister')->name('PostRegister');
 // Trang chu cua website
-Route::get('home','Usercontroller@ViewHome')->name('ViewHome');
+Route::get('home','UserController@ViewHome')->name('ViewHome');
+// Dang xuat tai khoan
+Route::get('logout','UserController@logout')->name('logout');
+// Dang tai mot bai viet len newfeed
+Route::post('upstt','UserController@upstt')->name('UpStt');
 

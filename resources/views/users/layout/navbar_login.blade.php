@@ -38,7 +38,7 @@
 						<div class="dropdown-menu">
 							<a class="dropdown-item" href="#">Link 1</a>
 							<a class="dropdown-item" href="#">Link 2</a>
-							<a class="dropdown-item" href="#">Logout</a>
+							<a class="dropdown-item" href="{{route('logout')}}">Logout</a>
 						</div>
 					</li> 
 				</ul>

@@ -36,6 +36,9 @@
     					<strong>Thông báo!</strong> <span class="" data-toggle="modal" data-target="#myModal">Đăng nhập</span> để có thể đăng tải bài viết.
   					</div>
 				@endif
+
+				@foreach ($status as $stt)
+
 						<div class="post bg-white rounded shadow-sm border z-3 mt-3">
 							<!-- Thong tin tac gia -->
 							<div class="pt-3 pr-3 pl-3">
@@ -44,8 +47,41 @@
 										<img src="img/avatar.png" alt="" class="rounded-circle img-fluid shadow-sm w-75">
 									</div>
 									<div class="col-8 pl-0">
-										<a href="">Xuan Truong</a><br>
-										<span>2 gio truoc</span>
+									@foreach($author as $at)
+										@if($stt->author == $at->id)
+											<a href="">{{$at->username}}</a><br>
+										@endif
+									@endforeach
+										
+									<?php
+										$day = substr($stt->time,0,2);
+										$daynow = date('d');
+										$month = substr($stt->time,3,2);
+										$monthnow = date('m');
+										$year = substr($stt->time,6,4);
+										$yearnow = date('Y');
+										if($day == $daynow && $month == $monthnow && $year == $yearnow)
+										{
+											$second = substr($stt->time,14,2);
+											$secondnow = date('i');
+											$lastsecond = $secondnow - $second;
+											if($lastsecond >= 60)
+											{
+												$hour = substr($stt->time,11,2);
+												$hournow = date('H');
+												$lasthour = $secondnow - $second;
+												echo "<span>".$lasthour." giờ trước</span>";
+											}
+											else
+												echo "<span>".$lastsecond." phút trước";
+										}
+										else
+										{
+											echo "<span>".$stt->time." phút trước";
+										}
+											
+
+									?> </span>
 									</div>
 									<div class="col-2">
 										<i class="fas fa-ellipsis-v float-right"></i>
@@ -55,7 +91,7 @@
 								<!-- Phan noi dung chu viet status -->
 								<div class="row mt-1">
 									<div class="col-12">
-										<p>The border-width property can have from one to four values (for the top border, right border, bottom border, and the left border).</p>
+										<p>{{$stt->content}}</p>
 									</div>
 								</div>
 							</div>
@@ -134,6 +170,7 @@
 								</div>
 							</div>
 						</div>
+						@endforeach
 					</div>
 				</div>
 			</div>

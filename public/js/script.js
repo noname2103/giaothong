@@ -9,6 +9,15 @@ $(document).ready(function(){
     	$("#showscooter").slideToggle();
     	$("#showmap").slideUp();
     });
+    
+    $(document).ready(function(){
+        $("#postcomment5bee9f92fb3f8b16a40079a7").click(function(){
+            //$.post('postcomment5bee9f92fb3f8b16a40079a7',function(data){
+                alert(1);
+                //$("#chatbox").html(data);
+            //});
+        });
+    });
 
     $("#btn-add-position").click(function(){
     	if(navigator.geolocation){

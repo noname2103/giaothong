@@ -30,14 +30,14 @@ class UserController extends Controller
         //Neu co roi thi tao session va den trang index
         if(!empty($login))
         {
-            session()->put('mathanhvien',$member->mathanhvien);
-            session()->put('anhdaidien',$member->anhdaidien);
-    		session()->put('tenthanhvien',$member->tenthanhvien);
-    		return redirect()->route('test');
+            session()->put('iduser',$login->id);
+            session()->put('email',$login->email);
+    		session()->put('password',$login->password);
+    		return redirect()->route('ViewHome');
         }
         // Neu chua co thi tro lai thong bao cho view login
         else
-            return redirect()->route('ViewLogin',['error'=>'Tài khoản hoặc mật khẩu không đúng!']);
+            return redirect()->route('ViewHome',['error'=>'Tài khoản hoặc mật khẩu không đúng!']);
             
         // if(Auth::attempt(['username'=>$username,'password'=>$password]))
         //     return view('users.layout.navbar');

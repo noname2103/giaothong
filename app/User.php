@@ -7,7 +7,10 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 
-class User extends Eloquent
+use Illuminate\Auth\Authenticatable as AuthenticableTrait;
+use Illuminate\Contracts\Auth\Authenticatable;  
+
+class User extends Eloquent implements Authenticatable
 {
 
 
@@ -15,6 +18,8 @@ class User extends Eloquent
     protected $connection = 'mongodb';
     protected $collection = 'User';
     protected $primarykey = 'id';
+
+    use AuthenticableTrait;
     
     use Notifiable;
 

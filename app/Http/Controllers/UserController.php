@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 use App\Users;
 use App\Status;
+use App\Comment;
 
 class UserController extends Controller
 {
@@ -98,5 +99,10 @@ class UserController extends Controller
         $db->save();
 
         return redirect()->route('ViewHome');
+    }
+    //Dang tai mot comment vao bai viet
+    public function PostComment($IdStatus)
+    {
+        return view('users.index.comment');
     }
 }

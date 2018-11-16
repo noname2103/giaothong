@@ -29,4 +29,6 @@ Route::get('home','UserController@ViewHome')->name('ViewHome');
 Route::get('logout','UserController@logout')->name('logout');
 // Dang tai mot bai viet len newfeed
 Route::post('upstt','UserController@upstt')->name('UpStt');
+// Dang tai binh luan mot bai viet
+Route::post('postcomment{IdStatus}','UserController@PostComment')->name('PostComment');
 

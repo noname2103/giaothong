@@ -62,18 +62,22 @@
 										$yearnow = date('Y');
 										if($day == $daynow && $month == $monthnow && $year == $yearnow)
 										{
-											$second = substr($stt->time,14,2);
-											$secondnow = date('i');
-											$lastsecond = $secondnow - $second;
-											if($lastsecond >= 60)
+											$hour = substr($stt->time,11,2);
+											$hournow = date('H');
+											$lasthour = $hournow - $hour;
+											if($lasthour < 24 )
 											{
-												$hour = substr($stt->time,11,2);
-												$hournow = date('H');
-												$lasthour = $secondnow - $second;
-												echo "<span>".$lasthour." giờ trước</span>";
+												$second = substr($stt->time,14,2);
+												$secondnow = date('i');
+												$lastsecond = $secondnow - $second;
+												if($lastsecond == 0)
+													echo "Vừa xong";
+												if($lastsecond < 60 && $lastsecond != 0)
+													echo "<span>".$lastsecond." phút trước";
+												else
+													echo "<span>".$lasthour." giờ trước";
 											}
-											else
-												echo "<span>".$lastsecond." phút trước";
+												
 										}
 										else
 										{
@@ -81,7 +85,7 @@
 										}
 											
 
-									?> </span>
+									?> <i class="fas fa-globe-americas"></i></span>
 									</div>
 									<div class="col-2">
 										<i class="fas fa-ellipsis-v float-right"></i>
@@ -131,42 +135,30 @@
     									<strong>Thông báo!</strong> <span class="" data-toggle="modal" data-target="#myModal">Đăng nhập</span> để có thể bình luận bài viết.
   									</div>
 								@else
+								<script type="text/javascript">
+									$(document).ready(function(){
+			    						$("#postcomment{{$stt->id}}").click(function(){
+			    							//$.post('postcomment{{$stt->id}}',function(data){
+    											alert(1);
+    											//$("#chatbox").html(data);
+    										//});
+			    						});
+									});
+								</script>
 									<div class="row mt-2" >
 										<div class="col-12">
 											<div class="input-group">
 												<input type="text" name="" class="form-control" placeholder="Nhập bình luận...">
 												<div class="input-group-append">
-													<button href="" class="btn btn-primary">Bình luận</button>
+													<button id="postcomment{{$stt->id}}" class="btn btn-primary">Bình luận</button>
 												</div>
 											</div>
 										</div>
 									</div>
 								@endif
 
-
-									<div class="row mt-2 pr-3">
-										<div class="col-2 pr-1">
-											<img src="img/avatar.png" class="img-thumbnail w-90 rounded">
-										</div>
-										<div class="col-10 pr-4 w-100 pb-1 bg-light border rounded  comment-content">
-											<div class="row justify-content-between">
-												<div class="col-10 col-sm-10 col-lg-11">
-													<a href="" class="name-in-comment">Xuân Trường </a>:
-													<span class="text-secondary time-of-comment"> 1 giờ trước <i class="fa fa-clock-o"></i></span>
-												</div>
-												<div class="col-1 col-sm-1 col-lg-1 align-self-end">
-													<i class="fa fa-ellipsis-h align-middle"></i>
-												</div>
-											</div>
-
-											<div class="row ">
-												<div class="col-12 text-justify pr-2">
-													<span>Chào mừng các bạn đến với hội thi olympic tin học Hutech, đây là một sân chơi lớn với hi vọng tìm ra đội tuyển xuất sắc nhất để tham dự các kỳ thi sắp tới. </span>
-												</div>
-											</div>
-
-										</div>
-									</div>
+								<div id="comment{{$stt->id}}"></div>
+									
 								</div>
 							</div>
 						</div>

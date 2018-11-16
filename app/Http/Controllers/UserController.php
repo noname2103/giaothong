@@ -68,7 +68,7 @@ class UserController extends Controller
         $db->password = $password;
         $db->save();
 
-        return redirect()->route('ViewLogin');
+        return redirect()->route('ViewHome');
     }
     //Trang chu qua website
     public function ViewHome()

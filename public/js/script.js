@@ -1,14 +1,63 @@
 $(document).ready(function(){
     $("#showmap").hide();
     $("#showscooter").hide();
-    $("#mapm").click(function(){
+    $("#showbus").hide();
+    $("#showcar").hide();
+    $("#showaccount").hide();
+    $("#showGopY").hide();
+     $("#mapm").click(function(){
         $("#showmap").slideToggle();
         $("#showscooter").slideUp();
+        $("#showbus").slideUp();
+        $("#showcar").slideUp();
+        $("#showaccount").slideUp();
+         $("#showGopY").slideUp();
     });
     $("#scooter").click(function(){
-    	$("#showscooter").slideToggle();
-    	$("#showmap").slideUp();
+        $("#showscooter").slideToggle();
+        $("#showmap").slideUp();
+        $("#showbus").slideUp();
+        $("#showaccount").slideUp();
+        $("#showaccount").slideUp();
+         $("#showGopY").slideUp();
     });
+
+    $("#bus").click(function(){
+        $("#showbus").slideToggle();
+        $("#showmap").slideUp();
+        $("#showscooter").slideUp();
+        $("#showcar").slideUp();
+        $("#showaccount").slideUp();
+         $("#showGopY").slideUp();
+    });
+
+    $("#car").click(function(){
+        $("#showcar").slideToggle();
+        $("#showmap").slideUp();
+        $("#showbus").slideUp();
+        $("#showscooter").slideUp();
+        $("#showaccount").slideUp();
+         $("#showGopY").slideUp();
+    });
+
+     $("#account").click(function(){
+        $("#showaccount").slideToggle();
+        $("#showscooter").slideUp();
+        $("#showbus").slideUp();
+        $("#showcar").slideUp();
+        $("#showmap").slideUp();
+        $("#showGopY").slideUp();
+    });
+
+      $("#GopY").click(function(){
+        $("#showGopY").slideToggle();
+        $("#showscooter").slideUp();
+        $("#showbus").slideUp();
+        $("#showcar").slideUp();
+        $("#showaccount").slideUp();
+        $("#showmap").slideUp();
+    });
+
     
     $(document).ready(function(){
         $("#postcomment5bee9f92fb3f8b16a40079a7").click(function(){

@@ -1,5 +1,5 @@
 <div class="bg-light rounded shadow-sm border">
-	<form action="{{route('UpStt')}}" method="post">
+	<form action="{{route('UpStt')}}" method="post" enctype="multipart/form-data">
 	{{ csrf_field() }}
 					<div class="row border-bottom mr-1 ml-1">
 						<div class="col-4 col-sm-4 border-right p-1 pl-2 text-center">
@@ -22,7 +22,10 @@
 								</div>
 							</div>
 							<div class="row ml-1 mr-1 mb-2 justify-content-center">
-								<div class="col-3 bg-white rounded ml-1 border p-1"><span class="btn btn-primary w-100"><i class="fas fa-image"></i> Ảnh/video</span></div>
+								<input type="text" id="lat" name="lat" style="display:none">
+								<input type="text" id="lon" name="lon" style="display:none">
+								<input type="file" id="file" name="imagestatus" style="display:none">
+								<div class="col-3 bg-white rounded ml-1 border p-1"><label for="file" class="btn btn-primary w-100 mb-0"><i class="fas fa-image"></i> Ảnh/video</label></div>
 								<div class="col-2 bg-white rounded ml-1 border p-1"><span class="btn btn-primary w-100" id="btn-add-position"><i class="fas fa-map-marker-alt"></i> Vị trí</span></div>
 								<div class="col-3 bg-white rounded ml-1 border p-1"><span class="btn btn-primary w-100"><i class="fa fa-tag"></i> Gắn thẻ</span></div>
 								<div class="col-3 rounded ml-1  p-0 align-self-center pl-3"><input type="submit" class="btn btn-primary w-100 h-100 align-middle shadow-sm" value="Đăng bài"></div>

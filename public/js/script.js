@@ -79,6 +79,9 @@ $(document).ready(function(){
             {
             	var lat = position.coords.latitude;
                 var lon = position.coords.longitude;
+
+                $("#lat").val(lat);
+                $("#lon").val(lon);
                 
                 console.log(lat + ":" + lon);
 

@@ -90,14 +90,37 @@ class UserController extends Controller
     //Dang tai mot bai viet len newfeed
     public function upstt(Request $request)
     {
+        if($request->hasFile('imagestatus'))
+        {
+            $imagestatus = $request->file('imagestatus')->getClientOriginalName();
+            $request->file('imagestatus')->move('img',$imagestatus);
+        }
+        else
+        {
+                $imagestatus = "";
+        }
+        if($request->lat != '' && $request->lon != '')
+        {
+            $lat = $request->lat;
+            $lon = $request->lon;
+        }
+        else
+        {
+            $lat = "";
+            $lon = "";
+        }
+
         $content = $request->contentstt;
 
         $db = new Status;
         $db->content = $content;
+        $db->images = $imagestatus;
+        $db->lat = $lat;
+        $db->lon = $lon;
         $db->author = session('iduser');
         $db->time = date('d-m-Y H:i:s');
-        $db->save();
 
+        $db->save();
         return redirect()->route('ViewHome');
     }
     //Dang tai mot comment vao bai viet

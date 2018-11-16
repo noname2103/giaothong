@@ -79,40 +79,72 @@
 								@endif
 								@endforeach
 
-								{{$stt->time}}
+							
 								<?php
 
-								$day = substr($stt->time,0,2);
-								$daynow = date('d');
-								$month = substr($stt->time,3,2);
-								$monthnow = date('m');
-								$year = substr($stt->time,6,4);
-								$yearnow = date('Y');
-								if($day == $daynow && $month == $monthnow && $year == $yearnow)
-								{
-
-
 									$hour = substr($stt->time,11,2);
-									$hourNow = date('H'); 
-									$lastHour = $hourNow - $hour;
-
-
-									if ($lastHour < 24) {
+									$hourNow = date('H');
+									$day = substr($stt->time,0,2);
+									$dayNow = date('d');
+									$month = substr($stt->time,3,2);
+									$monthNow = date('m');
+									$year = substr($stt->time,6,4);
+									$yearNow = date('Y');
+									if($hour == $hourNow && $day == $dayNow && $month == $monthNow && $year == $yearNow)
+									{
 										$minute = substr($stt->time,14,2);
 										$minuteNow = date('i');
-										$minuteLast = $minuteNow - $minute;
-										
-											if ($minuteLast == 0) {
-												echo "Vừa xong";
-											}elseif ($minuteLast < 60 && $minuteLast != 0) {
-												echo "<span>".$minuteLast." phút trước";
-											}elseif($minuteLast > 60){
-												echo "<span>".$lastHour." giờ trước";
-											}
-
+										if($minuteNow - $minute == 0)
+											echo "Vừa xong";
+										else
+										{
+											$lastMinute = $minuteNow - $minute;
+											echo $lastMinute." phút trước";
+										}
 									}
+									else
+									{
+										if($day == $dayNow && $month == $monthNow && $year == $yearNow)
+										{
+											$lastHour = $hourNow - $hour;
+											echo $lastHour." giờ trước";
+										}
+										else
+										{
+											echo $stt->time;
+										}
+									}
+								// $day = substr($stt->time,0,2);
+								// $daynow = date('d');
+								// $month = substr($stt->time,3,2);
+								// $monthnow = date('m');
+								// $year = substr($stt->time,6,4);
+								// $yearnow = date('Y');
+								// if($day == $daynow && $month == $monthnow && $year == $yearnow)
+								// {
 
-								}
+
+								// 	$hour = substr($stt->time,11,2);
+								// 	$hourNow = date('H'); 
+								// 	$lastHour = $hourNow - $hour;
+
+
+								// 	if ($lastHour < 24) {
+								// 		$minute = substr($stt->time,14,2);
+								// 		$minuteNow = date('i');
+								// 		$minuteLast = $minuteNow - $minute;
+										
+								// 			if ($minuteLast == 0) {
+								// 				echo "Vừa xong";
+								// 			}elseif ($minuteLast < 60 && $minuteLast != 0) {
+								// 				echo "<span>".$minuteLast." phút trước";
+								// 			}elseif($minuteLast > 60){
+								// 				echo "<span>".$lastHour." giờ trước";
+								// 			}
+
+								// 	}
+
+								// }
 										// 	$hour = substr($stt->time,11,2);
 										// 	$hournow = date('H');
 										// 	$lasthour = $hournow - $hour;
@@ -153,7 +185,8 @@
 					<!-- Phan hinh anh status -->
 					<div class="row">
 						<div class="col-12">
-							<img src="img/thiolympic.jpg" alt="" class="img-fluid">
+							<img src="img/{{$stt->images}}" alt="" class="img-fluid">
+							
 						</div>
 					</div>
 					<div class="pb-3 pr-3 pl-3">

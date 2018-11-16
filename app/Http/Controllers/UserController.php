@@ -3,10 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-<<<<<<< HEAD
-=======
-
->>>>>>> 89ad5d590c7188e25db5025e927fb3ac59e57c66
 use Illuminate\Support\Facades\Auth;
 use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 use App\Users;
@@ -72,7 +68,7 @@ class UserController extends Controller
         $db->password = $password;
         $db->save();
 
-        return redirect()->route('ViewLogin');
+        return redirect()->route('ViewHome');
     }
     //Trang chu qua website
     public function ViewHome()

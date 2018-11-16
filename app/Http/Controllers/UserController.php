@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 89ad5d590c7188e25db5025e927fb3ac59e57c66
 use Illuminate\Support\Facades\Auth;
 use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 use App\Users;
@@ -74,6 +78,6 @@ class UserController extends Controller
     public function ViewHome()
     {
         return view('users.index.home');
->>>>>>> d08c968bf62666decd686eb2b1317ba61426a475
+
     }
 }

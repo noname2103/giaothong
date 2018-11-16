@@ -175,8 +175,11 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Jenssegers\Mongodb\MongodbServiceProvider::class,
+<<<<<<< HEAD
+=======
 
         //‘Jenssegers\Mongodb\Auth\PasswordResetServiceProvider’,
+>>>>>>> d08c968bf62666decd686eb2b1317ba61426a475
 
     ],
 

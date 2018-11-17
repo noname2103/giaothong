@@ -77,7 +77,7 @@
 
 						<a class="list-group-item list-group-item-action" id="bus"><i class="fas fa-bus-alt"></i> Xe buýt</a>
 						<span id="showbus" class="rounded-0" style="display: none"> 
-							<a href="#" class="list-group-item list-group-item-action pl-5 rounded-0 border-bottom-0"><i class="fas fa-search-location"></i> Tra cứu</a>
+							<a href="{{route('BusSearch')}}" class="list-group-item list-group-item-action pl-5 rounded-0 border-bottom-0"><i class="fas fa-search-location"></i> Tra cứu</a>
 							<a href="#" class="list-group-item list-group-item-action pl-5 rounded-0 border-bottom-0"><i class="fas fa-map-marker-alt"></i></i> Tìm đường</a>
 							<a href="#" class="list-group-item list-group-item-action pl-5 rounded-0 border-bottom-0"><i class="fas fa-info-circle"></i> Báo cáo xe</a>
 						</span>

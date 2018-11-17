@@ -181,4 +181,9 @@ class UserController extends Controller
 
         return "Cám ơn bạn đã thông báo tình hình giao thông!";
     }
+    // Trang tra cuu tuyen xe buyt
+    public function BusSearch()
+    {
+        return view('users.bus.bussearch');
+    }
 }

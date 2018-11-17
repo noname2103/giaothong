@@ -35,4 +35,6 @@ Route::get('postcomment{idstt}/{content}','UserController@PostComment')->name('P
 Route::get('map','UserController@ViewMap')->name('ViewMap');
 // Ping ket xe
 Route::get('pingtraffic{lat}/{lon}','UserController@PingTraffic')->name('PingTraffic');
+// Tra cuu tuyen xe buyt
+Route::get('bussearch','UserController@BusSearch')->name('BusSearch');
 

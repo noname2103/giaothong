@@ -31,7 +31,15 @@
         <h4 class="text-warning">Lưu ý</h4>
     </div>
     <div class="col-12 bg-light rounded mb-2">
-    23233213
+        <p>Giá vé: Đối tượng học sinh - sinh viên : 2000 đồng, đối tượng khác: 5000 đồng.  </p>
+        <br>
+        <p>Chuẩn bị tiền lẻ trước khi lên xe.</p>
+        <br>
+        <p>Quý khách lên xe cửa trước và xuống cửa sau.</p>
+        <br>
+        <p>Vui lòng giữ vệ sinh chung trên xe buýt.</p>
+        <br>
+        <p>Mọi phản ánh về tài xế và tiếp viên vui lòng báo cáo với chúng tôi.</p>
     </div>
 </div>
 

@@ -47,11 +47,12 @@
 								$("#authorname{{$at->id}}").mouseenter(function(){
 									$("#authorshow{{$at->id}}").show();
 								});
+
 								$("#authorname{{$at->id}}").mouseleave(function(){
 									$("#authorshow{{$at->id}}").mouseleave(function(){
 									$("#authorshow{{$at->id}}").hide();
 								});
-							});
+								});
 								</script>
 								@endif
 								

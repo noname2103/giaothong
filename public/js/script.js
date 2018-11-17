@@ -16,6 +16,7 @@ $(document).ready(function(){
         $("#showscooter").slideToggle();
         $("#showmap").slideUp();
         $("#showbus").slideUp();
+        $("#showcar").slideUp();
         $("#showaccount").slideUp();
         $("#showaccount").slideUp();
          $("#showGopY").slideUp();
@@ -114,16 +115,16 @@ $(document).ready(function(){
 					map:map
                 });
                 
-                var cityCircle = new google.maps.Circle({
-                    strokeColor: '#FF0000',
-                    strokeOpacity: 0.8,
-                    strokeWeight: 0,
-                    fillColor: '#FF0000',
-                    fillOpacity: 0.35,
-                    map: map,
-                    center: {lat:lat, lng:lon},
-                    radius: Math.sqrt(40) * 10
-                  });
+                // var cityCircle = new google.maps.Circle({
+                //     strokeColor: '#FF0000',
+                //     strokeOpacity: 0.8,
+                //     strokeWeight: 0,
+                //     fillColor: '#FF0000',
+                //     fillOpacity: 0.35,
+                //     map: map,
+                //     center: {lat:lat, lng:lon},
+                //     radius: Math.sqrt(40) * 10
+                //   });
             }
         }
     });

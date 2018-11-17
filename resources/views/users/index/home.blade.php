@@ -4,7 +4,7 @@
 <!-- <div id="googleMap" style="width:100%;height:400px;"></div> -->
 
 
-			<div class="mt-5 pt-4 col-12 col-sm-12 col-lg-6 newfeed ml-sm-0 shadow-sm" style="background-color: rgba(255, 255, 255, 0.5);">
+			<div class="mt-5 pt-4 col-12 col-md-12 col-sm-12 col-lg-6 newfeed ml-sm-0 ml-md-0 shadow-sm" style="background-color: rgba(255, 255, 255, 0.5);">
 				
 				@if(!empty(session('iduser')))
 				@include('users.index.post_sttbox')
@@ -164,12 +164,30 @@
 
 						<div class="row border-top border-bottom ml-0 mr-0">
 							<div class="col-4 text-center p-2 btn-in-status" style="position: relative;">
-								<a class="text-danger" id="danhgiabtn{{$stt->id}}"><i class="fa fa-gavel fa-lg "></i> Đánh giá</a>
+								<a class="text-danger" id="danhgiabtn{{$stt->id}}">
+									<?php $flat = 0; ?>
+									@foreach($reviews as $rv)
+										@if($rv->idstt == $stt->id && $rv->iduser == session('iduser'))
+											@if($rv->rev == 'good')
+												<i class='fas fa-grin-hearts fa-lg text-success'></i><span class='text-success font-weight-bold'> Rất hay</span>
+											@endif
+											@if($rv->rev == 'normal')
+												<i class='fas fa-grin-alt fa-lg text-warning'></i><span class='text-warning font-weight-bold'> Bình thường</span>
+											@endif
+											@if($rv->rev == 'bad')
+												<i class='fas fa-tired fa-lg text-danger'></i><span class='text-danger font-weight-bold'> Dở tệ</span>
+											@endif
+											<?php $flat = 1; ?>
+										@endif
+									@endforeach
+									<?php if($flat == 0)
+											echo "<i class='fa fa-gavel fa-lg '></i> Đánh giá</a>";
+									?>
 								<div class="bg-light rounded-top shadow-sm p-2 border border-bottom-0" id="danhgiashow{{$stt->id}}"" style="position: absolute; top: -49px; left: 0px; display:none;">
 									<div class="row">
-										<i class="fas fa-grin-hearts fa-2x col-4 text-success" data-toggle="tooltip" data-placement="top" title="Rất hay"></i>
-										<i class="fas fa-grin-alt fa-2x col-4 text-warning" data-toggle="tooltip" data-placement="top" title="Bình thường"></i>
-										<i class="fas fa-tired fa-2x col-4 text-danger" data-toggle="tooltip" data-placement="top" title="Tệ lắm"></i>
+										<i class="fas fa-grin-hearts fa-2x col-4 text-success" data-toggle="tooltip" data-placement="top" title="Rất hay" id="good{{$stt->id}}"></i>
+										<i class="fas fa-grin-alt fa-2x col-4 text-warning" data-toggle="tooltip" data-placement="top" title="Bình thường" id="normal{{$stt->id}}"></i>
+										<i class="fas fa-tired fa-2x col-4 text-danger" data-toggle="tooltip" data-placement="top" title="Tệ lắm" id="bad{{$stt->id}}"></i>
 									</div>	
 								</div>
 							</div>
@@ -182,6 +200,31 @@
 						</div>
 
 						<script>
+
+							$("#good{{$stt->id}}").click(function(){
+								$.get("confirm{{$stt->id}}/good",
+									function(data){
+										//alert(data);
+										$("#danhgiabtn{{$stt->id}}").html("<i class='fas fa-grin-hearts fa-lg text-success'></i><span class='text-success font-weight-bold'> Rất hay</span>");
+										//$("#comment{{$stt->id}}").prepend(data);
+									});
+							});
+							$("#normal{{$stt->id}}").click(function(){
+								$.get("confirm{{$stt->id}}/normal",
+									function(data){
+										//alert(data);
+										$("#danhgiabtn{{$stt->id}}").html("<i class='fas fa-grin-alt fa-lg text-warning'></i><span class='text-warning font-weight-bold'> Bình thường</span>");
+										//$("#comment{{$stt->id}}").prepend(data);
+									});
+							});
+							$("#bad{{$stt->id}}").click(function(){
+								$.get("confirm{{$stt->id}}/bad",
+									function(data){
+										//alert(data);
+										$("#danhgiabtn{{$stt->id}}").html("<i class='fas fa-tired fa-lg text-danger'></i><span class='text-danger font-weight-bold'> Dở tệ</span>");
+										//$("#comment{{$stt->id}}").prepend(data);
+									});
+							});
 							$("#danhgiabtn{{$stt->id}}").mouseenter(function(){
 								$("#danhgiashow{{$stt->id}}").show();
 							});

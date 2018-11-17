@@ -9,6 +9,7 @@ use App\Users;
 use App\Status;
 use App\Comment;
 use App\Ptraffic;
+use App\Reviews;
 
 class UserController extends Controller
 {
@@ -76,11 +77,12 @@ class UserController extends Controller
     //Trang chu qua website
     public function ViewHome()
     {
-        $db = Status::all();
+        $db = Status::orderBy('time','desc')->get();
         $comment = Comment::all();
         $author = Users::all();
+        $reviews = Reviews::all();
 
-        return view('users.index.home',['status'=>$db,'author'=>$author,'comment'=>$comment]);
+        return view('users.index.home',['status'=>$db,'author'=>$author,'comment'=>$comment,'reviews'=>$reviews]);
 
     }
     //Dang xuat tai khoan
@@ -116,6 +118,7 @@ class UserController extends Controller
 
         $db = new Status;
         $db->content = $content;
+        $db->rate = 100;
         $db->images = $imagestatus;
         $db->lat = $lat;
         $db->lon = $lon;
@@ -185,5 +188,43 @@ class UserController extends Controller
     public function BusSearch()
     {
         return view('users.bus.bussearch');
+    }
+    // Danh gia mot bai viet
+    public function Confirm($idstt, $conf)
+    {
+        // $status = Status::where('id','=',$idstt)->first();
+        // if($conf == 'good')
+        // {
+        //     $status->rate = ($status->rate + 100)/2;
+        // }
+        // else
+        // {
+        //     if($conf == 'normal')
+        //         $status->rate = ($status->rate + 50)/2;
+        //     else
+        //         $status->rate = ($status->rate + 0)/2;
+        // }
+            
+
+        $check = Reviews::where([
+            ['iduser','=',session('iduser')],
+    		['idstt','=',$idstt],
+        ])->first();
+
+        if(!empty($check))
+        {
+            Reviews::where([
+                ['iduser','=',session('iduser')],
+                ['idstt','=',$idstt],
+            ])->delete();
+        }
+
+        $db = new Reviews;
+        $db->rev = $conf;
+        $db->idstt = $idstt;
+        $db->iduser = session('iduser');
+        $db->save();
+
+        return 0;
     }
 }

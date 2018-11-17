@@ -10,6 +10,12 @@
     background-repeat: repeat-x; 
     background-size:  13%;
 }
+body{
+    cursor:  url("../img/pointer.png"), auto;
+}
+a:hover,input[type="submit"],.btn:hover{
+	cursor: url("../img/hover.png"),auto;
+}
 .city{
     width: 100%;
     height: 6.5%;

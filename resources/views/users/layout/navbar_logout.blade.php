@@ -2,10 +2,10 @@
 <nav class="navbar navbar-expand-md bg-info navbar-dark fixed-top p-1">
 	<div class="container">
 		<ul class="navbar-nav row w-100 justify-content-between">
-			<li class="col-2 col-sm-2  col-md-2 col-lg-2   nav-item">
+			<li class="col-2 col-sm-3  col-md-5 col-lg-2   nav-item">
 				<a class="navbar-brand" href="#"><img src="img/logo.png" class="img-fluid w-50 w-sm-100"></a>
 			</li>
-			<li class="col-10 ol-sm-10 col-md-9 col-lg-5 c  nav-item align-self-end">
+			<li class="col-10 col-sm-7 col-md-5 col-lg-5  nav-item align-self-end">
 				<button type="button" class="btn btn-warning shadow-sm float-right" data-toggle="modal" data-target="#myModal">Đăng nhập</button>
 
 				<button type="button" class="btn btn-warning shadow-sm float-right mr-2" data-toggle="modal" data-target="#Modal_Register">Đăng ký</button>

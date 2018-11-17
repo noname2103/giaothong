@@ -13,8 +13,15 @@
 				<li class="col-2 nav-item">
 					<a class="navbar-brand" href="#"><img src="img/logo.png" class="img-fluid w-50"></a>
 				</li>
-				<li class="col-1 nav-item align-self-center">
-					<i class="fas fa-user-plus fa-2x align-middle"></i>	
+				<li class="col-1 nav-item align-self-center" style="position:relative;">
+					<i class="fas fa-user-plus fa-2x align-middle" id="addfriendbtn"></i>	
+					<div id="addfriendshow" class="bg-light border shadow-sm" style="position:absolute; bottom: -77px; left: -20px;">
+						<ul>
+							<li>123</li>
+							<li>12345</li>
+							<li>23213</li>
+						</ul>
+					</div>
 				</li>
 				<li class="col-1 nav-item align-self-center">
 					<i class="fas fa-comment-dots fa-2x align-middle"></i>

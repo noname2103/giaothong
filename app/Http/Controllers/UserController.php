@@ -8,6 +8,7 @@ use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 use App\Users;
 use App\Status;
 use App\Comment;
+use App\Ptraffic;
 
 class UserController extends Controller
 {
@@ -124,14 +125,26 @@ class UserController extends Controller
         return redirect()->route('ViewHome');
     }
     //Dang tai mot comment vao bai viet
-    public function PostComment($IdStatus)
+    public function PostComment($bien1,$bien2)
     {
-        // return view('users.index.comment');
-        return "Hello".$IdStatus;
+        //return view('users.index.comment');
+        return $bien1+"Hello"+$bien2;
     }
     //Trang xem ban do
     public function ViewMap()
     {
-        return view('users.index.map');
+        $pingtraffic = Ptraffic::all();
+        return view('users.index.map',['pingtraffic'=>$pingtraffic]);
+    }
+    // Ping ket xe
+    public function PingTraffic($lat,$lon)
+    {
+        $db = new Ptraffic;
+        $db->lat = $lat;
+        $db->lon = $lon;
+        $db->user = session('iduser');
+        $db->save();
+
+        return "Cám ơn bạn đã thông báo tình hình giao thông!";
     }
 }

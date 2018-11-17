@@ -14,7 +14,7 @@
 				</div>
 				@endif
 
-				@foreach ($status as $stt)
+				@foreach($status as $stt)
 
 				<div class="post bg-white rounded shadow-sm border z-3 mt-3">
 					<!-- Thong tin tac gia -->
@@ -30,7 +30,7 @@
 								@endif
 								@endforeach
 
-							
+							<span class="text-secondary">
 								<?php
 
 									$hour = substr($stt->time,11,2);
@@ -62,7 +62,21 @@
 										}
 										else
 										{
-											echo $stt->time;
+											if($month == $monthNow && $year == $yearNow)
+											{
+												$lastday = $dayNow - $day;
+												if($lastday == 1)
+												{
+													$minutetomorrow = substr($stt->time,11,5);
+													echo $minutetomorrow." hôm qua";
+												}
+													
+												else
+												echo $stt->time;
+
+											}
+											else
+												echo $stt->time;
 										}
 									}
 
@@ -124,15 +138,19 @@
 								<a class="text-danger"><i class="fa fa-gavel fa-lg "></i> Đánh giá</a>
 							</div>
 							<div class="col-4 text-center p-2 btn-in-status">
-								<a class="text-info" id="comment-btn"><i class="fa fa-coffee fa-lg"></i> Thảo luận</a>
+								<a class="text-info" id="comment-btn{{$stt->id}}"><i class="fa fa-coffee fa-lg"></i> Thảo luận</a>
 							</div>
 							<div class="col-4 text-center p-2 btn-in-status">
 								<a href="" class="text-warning"><i class="fa fa-link fa-lg"></i> Chia sẻ</a>
 							</div>
 						</div>
 
-
-						<div id="comment-box">
+						<script>
+						    $("#comment-btn{{$stt->id}}").click(function(){
+    							$("#comment-box{{$stt->id}}").slideToggle();
+							});
+						</script>
+						<div id="comment-box{{$stt->id}}">
 
 							@if(empty(session('iduser')))
 							<div class="alert alert-warning shadow-sm mt-3">
@@ -140,19 +158,28 @@
 							</div>
 							@else
 							<script type="text/javascript">
-								$(document).ready(function(){
+								//$(document).ready(function(){
 									$("#postcomment{{$stt->id}}").click(function(){
-			    							$.get('postcomment{{$stt->id}}',function(data){
-												$("#comment{{$stt->id}}").html(data);
+										if($("#cmtcontent{{$stt->id}}").val() != '')
+										{
+											var content = $("#cmtcontent{{$stt->id}}").val();
+											$.get("postcomment{{$stt->id}}-123",function(data){
+												//$("#comment{{$stt->id}}").html(data);
 												alert(data);
-    										});
-    									});
-								});
+											});
+											
+
+    									
+										}
+										else
+											alert('Vui lòng nhập nội dung!');
+									});
+								//});
 							</script>
 							<div class="row mt-2" >
 								<div class="col-12">
 									<div class="input-group">
-										<input type="text" name="" class="form-control" placeholder="Nhập bình luận...">
+										<input type="text" name="comment" id="cmtcontent{{$stt->id}}" class="form-control" placeholder="Nhập bình luận...">
 										<div class="input-group-append">
 											<span id="postcomment{{$stt->id}}" class="btn btn-primary">Bình luận</span>
 										</div>

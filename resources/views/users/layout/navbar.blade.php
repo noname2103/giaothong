@@ -37,8 +37,27 @@
 						<span id="showmap" class="rounded-0">
 						
 							<a href="{{route('ViewMap')}}" class="list-group-item list-group-item-action pl-5 rounded-0"><i class="fas fa-search"></i> Xem bản đồ</a>
-							<a href="#" class="list-group-item list-group-item-action pl-5 rounded-0 border-bottom-0"><i class="fas fa-map-pin"></i> Ping kẹt xe</a>
+							<a id="pingtraffic" class="list-group-item list-group-item-action pl-5 rounded-0 border-bottom-0"><i class="fas fa-map-pin"></i> Ping kẹt xe</a>
 						</span>
+						<script>
+							$("#pingtraffic").click(function(){
+								if(navigator.geolocation){
+									var nav = navigator.geolocation;
+									var pos = nav.getCurrentPosition(showPosition);
+
+									function showPosition(position)
+									{
+										var lat = position.coords.latitude;
+										var lon = position.coords.longitude;
+
+										$.get("pingtraffic"+lat+"/"+lon,
+										function(data){
+											alert(data);
+										});
+									}
+								}
+							});
+						</script>
 						<a class="list-group-item list-group-item-action" id="car"><i class="fas fa-car"></i> Xe ô tô</a>
 						<span id="showcar" class="rounded-0">
 							<a href="#" class="list-group-item list-group-item-action pl-5 rounded-0"><i class="fas fa-street-view"></i> Thi bằng lái</a>

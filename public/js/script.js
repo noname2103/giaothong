@@ -1,4 +1,7 @@
 $(document).ready(function(){
+
+    $('[data-toggle="tooltip"]').tooltip();   
+    
     $("#showmap").hide();
     $("#showscooter").hide();
     $("#showbus").hide();

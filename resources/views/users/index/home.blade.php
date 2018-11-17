@@ -134,8 +134,15 @@
 						</div>
 
 						<div class="row border-top border-bottom ml-0 mr-0">
-							<div class="col-4 text-center p-2 btn-in-status">
-								<a class="text-danger"><i class="fa fa-gavel fa-lg "></i> Đánh giá</a>
+							<div class="col-4 text-center p-2 btn-in-status" style="position: relative;">
+								<a class="text-danger" id="danhgiabtn{{$stt->id}}"><i class="fa fa-gavel fa-lg "></i> Đánh giá</a>
+								<div class="bg-light rounded-top shadow-sm p-2 border border-bottom-0" id="danhgiashow{{$stt->id}}"" style="position: absolute; top: -49px; left: 0px; display:none;">
+									<div class="row">
+										<i class="fas fa-grin-hearts fa-2x col-4 text-success" data-toggle="tooltip" data-placement="top" title="Rất hay"></i>
+										<i class="fas fa-grin-alt fa-2x col-4 text-warning" data-toggle="tooltip" data-placement="top" title="Bình thường"></i>
+										<i class="fas fa-tired fa-2x col-4 text-danger" data-toggle="tooltip" data-placement="top" title="Tệ lắm"></i>
+									</div>	
+								</div>
 							</div>
 							<div class="col-4 text-center p-2 btn-in-status">
 								<a class="text-info" id="comment-btn{{$stt->id}}"><i class="fa fa-coffee fa-lg"></i> Thảo luận</a>
@@ -146,6 +153,14 @@
 						</div>
 
 						<script>
+							$("#danhgiabtn{{$stt->id}}").mouseenter(function(){
+								$("#danhgiashow{{$stt->id}}").show();
+							});
+							$("#danhgiabtn{{$stt->id}}").mouseleave(function(){
+								$("#danhgiashow{{$stt->id}}").mouseleave(function(){
+									$("#danhgiashow{{$stt->id}}").hide();
+								});
+							});
 						    $("#comment-btn{{$stt->id}}").click(function(){
     							$("#comment-box{{$stt->id}}").slideToggle();
 							});
@@ -160,8 +175,8 @@
 							<script type="text/javascript">
 								//$(document).ready(function(){
 									$("#postcomment{{$stt->id}}").click(function(){
-										if($("#cmtcontent{{$stt->id}}").val() != '')
-										{
+										//if($("#cmtcontent{{$stt->id}}").val() != '')
+										//{
 											var content = $("#cmtcontent{{$stt->id}}").val();
 											$.get("postcomment{{$stt->id}}-123",function(data){
 												//$("#comment{{$stt->id}}").html(data);
@@ -170,9 +185,9 @@
 											
 
     									
-										}
-										else
-											alert('Vui lòng nhập nội dung!');
+										//}
+										//else
+											//alert('Vui lòng nhập nội dung!');
 									});
 								//});
 							</script>

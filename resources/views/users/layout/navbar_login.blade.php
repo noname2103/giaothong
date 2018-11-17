@@ -15,12 +15,17 @@
 				</li>
 				<li class="col-1 nav-item align-self-center" style="position:relative;">
 					<i class="fas fa-user-plus fa-2x align-middle" id="addfriendbtn"></i>	
-					<div id="addfriendshow" class="bg-light border shadow-sm" style="position:absolute; bottom: -77px; left: -20px;">
-						<ul>
-							<li>123</li>
-							<li>12345</li>
-							<li>23213</li>
-						</ul>
+					<div id="addfriendshow" class="bg-info border shadow-sm p-3" style="position:absolute; bottom: -180px; left: -100px; width: 300px;">
+					<div class="list-group">
+						<a href="#" class="list-group-item list-group-item-action">
+							<div class="row">
+								<div class="col-3"><img src="img/avatar.png" class="img-fluid"></div>
+								<div class="col-7">Xuân Trường</div>
+							</div>
+						</a>
+						<a href="#" class="list-group-item list-group-item-action">Second item</a>
+						<a href="#" class="list-group-item list-group-item-action">Third item</a>
+						</div>
 					</div>
 				</li>
 				<li class="col-1 nav-item align-self-center">

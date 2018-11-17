@@ -141,21 +141,12 @@ $(document).ready(function(){
         }
     });
 
-    // $("#googleMapStatus").css({"width": "100%", "height": "200px", "margin-bottom": "10px"});
-    // var mapDiv = document.getElementById('googleMapStatus');
-									
-	// 								var lat = 10.855991;
-	// 								var lon = 106.78440479999999;
-	// 								var options = { 
-	// 									zoom:17,
-	// 									center:{lat:lat,lng:lon}
-	// 								}
-	// 								var map=new google.maps.Map(mapDiv, options);
-
-	// 								var marker = new google.maps.Marker({
-	// 									position:{lat:lat,lng:lon},
-	// 									map:map
-	// 								});
+    $("#busnumber").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#busshow div").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+    });
 
 
 });

@@ -9,18 +9,18 @@
             <div class="input-group-prepend">
               <span class="input-group-text"><i class="fas fa-bus"></i></span>
           </div>
-          <input type="text" class="form-control" placeholder="Nhập số tuyến xe buýt...">
+          <input type="text" class="form-control" id="busnumber" placeholder="Nhập số tuyến xe buýt...">
       </div>
   </div>
-  <div>
+  <div id="busshow">
     <div class="bg-light rounded row shadow-sm border p-2 m-0 mb-1">
-        <div class="col-3 p-0 align-self-center"> <img src="img/busimg.jpg" alt="" class="img-fluid"></div>
+        <div class="col-3 p-0 align-self-center"><img src="img/busimg.jpg" alt="" class="img-fluid"></div>
         <div class="col-6"><a href="">Xe buýt số 125</a><br>Hoạt động: 9:30 - 7:40<br>Bến Thành - BX. Miền Đông</div>
         <div class="col-3 align-self-center"><a href="" class="btn btn-primary align-middle">Chi tiết</a></div>
     </div>
     <div class="bg-light rounded row shadow-sm border p-2 m-0 mb-1">
-        <div class="col-3 p-0 align-self-center"> <img src="img/busimg.jpg" alt="" class="img-fluid"></div>
-        <div class="col-6"><a href="">Xe buýt số 125</a><br>Hoạt động: 9:30 - 7:40<br>Bến Thành - BX. Miền Đông</div>
+        <div class="col-3 p-0 align-self-center"><img src="img/busimg.jpg" alt="" class="img-fluid"></div>
+        <div class="col-6"><a href="">Xe buýt số 843</a><br>Hoạt động: 9:30 - 7:40<br>Bến Thành - BX. Miền Đông</div>
         <div class="col-3 align-self-center"><a href="" class="btn btn-primary align-middle">Chi tiết</a></div>
     </div>
 </div>

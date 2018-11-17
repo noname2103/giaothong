@@ -164,6 +164,7 @@
 						    $("#comment-btn{{$stt->id}}").click(function(){
     							$("#comment-box{{$stt->id}}").slideToggle();
 							});
+							
 						</script>
 						<div id="comment-box{{$stt->id}}">
 
@@ -172,34 +173,6 @@
 								<strong>Thông báo!</strong> <span class="" data-toggle="modal" data-target="#myModal">Đăng nhập</span> để có thể bình luận bài viết.
 							</div>
 							@else
-							<script type="text/javascript">
-								//$(document).ready(function(){
-									$("#postcomment{{$stt->id}}").click(function(){
-										//if($("#cmtcontent{{$stt->id}}").val() != '')
-										//{
-											var content = $("#cmtcontent{{$stt->id}}").val();
-											// $.get("postcomment{{$stt->id}}-123",function(data){
-											// 	//$("#comment{{$stt->id}}").html(data);
-											// 	alert(data);
-											// });
-											$.ajax({
-												type:'POST',
-												url:'/postcomment',
-												dataType: 'json',
-												data:{content : content},
-												success:function(data){
-													alert(data);
-												}
-												});
-											
-
-    									
-										//}
-										//else
-											//alert('Vui lòng nhập nội dung!');
-									});
-								//});
-							</script>
 							<div class="row mt-2" >
 								<div class="col-12">
 									<div class="input-group">
@@ -210,9 +183,48 @@
 									</div>
 								</div>
 							</div>
+							<script>
+								$("#postcomment{{$stt->id}}").click(function(){
+									var content = $("#cmtcontent{{$stt->id}}").val();
+									$.get("postcomment{{$stt->id}}/"+content,
+										function(data){
+											$("#comment{{$stt->id}}").prepend(data);
+										});
+										$("#cmtcontent{{$stt->id}}").val('');	
+											
+								});
+								</script>
 							@endif
 
-							<div id="comment{{$stt->id}}"></div>
+							<div id="comment{{$stt->id}}">
+								@foreach($comment as $cmt)
+								@if($cmt->idstt == $stt->id)
+								<div class="row mt-2 pr-3">
+										<div class="col-2 pr-1">
+											<img src="img/avatar.png" class="img-thumbnail w-90 rounded">
+										</div>
+										<div class="col-10 pr-4 w-100 pb-1 bg-light border rounded  comment-content">
+											<div class="row justify-content-between">
+												<div class="col-10 col-sm-10 col-lg-11">
+													<a href="" class="name-in-comment">Xuân Trường </a>:
+													<span class="text-secondary time-of-comment"> {{$cmt->time}} <i class="fa fa-clock-o"></i></span>
+												</div>
+												<div class="col-1 col-sm-1 col-lg-1 align-self-end">
+													<i class="fa fa-ellipsis-h align-middle"></i>
+												</div>
+											</div>
+
+											<div class="row ">
+												<div class="col-12 text-justify pr-2">
+													<span>{{$cmt->content}}</span>
+												</div>
+											</div>
+
+										</div>
+									</div>
+								@endif
+								@endforeach
+							</div>
 
 						</div>
 					</div>

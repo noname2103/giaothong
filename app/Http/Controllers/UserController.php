@@ -125,10 +125,10 @@ class UserController extends Controller
         return redirect()->route('ViewHome');
     }
     //Dang tai mot comment vao bai viet
-    public function PostComment($bien1,$bien2)
+    public function PostComment()
     {
         //return view('users.index.comment');
-        return $bien1+"Hello"+$bien2;
+        return "Hello";
     }
     //Trang xem ban do
     public function ViewMap()

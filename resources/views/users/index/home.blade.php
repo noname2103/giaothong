@@ -178,10 +178,19 @@
 										//if($("#cmtcontent{{$stt->id}}").val() != '')
 										//{
 											var content = $("#cmtcontent{{$stt->id}}").val();
-											$.get("postcomment{{$stt->id}}-123",function(data){
-												//$("#comment{{$stt->id}}").html(data);
-												alert(data);
-											});
+											// $.get("postcomment{{$stt->id}}-123",function(data){
+											// 	//$("#comment{{$stt->id}}").html(data);
+											// 	alert(data);
+											// });
+											$.ajax({
+												type:'POST',
+												url:'/postcomment',
+												dataType: 'json',
+												data:{content : content},
+												success:function(data){
+													alert(data);
+												}
+												});
 											
 
     									

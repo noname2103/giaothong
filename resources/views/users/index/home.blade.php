@@ -37,9 +37,11 @@
 										<div class="col-5">
 											<span>{{$at->username}}</span>
 										</div>
-										<div class="col-4">
-											<span class="btn btn-primary addfriendbtn{{$at->id}}" >Kết bạn</span>
-										</div>
+										@if($at->id != session('iduser'))
+											<div class="col-4">
+												<span class="btn btn-primary addfriendbtn{{$at->id}}" >Kết bạn</span>
+											</div>
+										@endif
 									</div>
 								</div>
 								</div>

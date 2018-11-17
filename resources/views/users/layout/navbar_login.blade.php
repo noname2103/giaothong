@@ -29,49 +29,14 @@
 				</li>
 				<li class="col-1 nav-item align-self-center" style="position:relative;">
 					<i class="fas fa-user-plus fa-2x align-middle" id="addfriendbtn"></i>	
-					<div id="addfriendshow" class="bg-info border shadow-sm p-3" style="position:absolute; display: none; bottom: -205px; left: -100px; width: 400px;">
-						<div class="list-group">
-							<a href="#" class="list-group-item list-group-item-action">
-								<div class="row">
-									<div class="col-2"><img src="img/avatar.png" class="img-fluid rounded-circle"></div>
-									<div class="col-6">Xuân Trường</div> 
-
-									<div class="col-2">
-										<button class="btn btn-primary btn-sm"><i class="fas fa-check"></i></button>
-									</div>
-									<div class="col-2">
-										<button class="btn btn-default btn-sm"><i class="fas fa-times"></i></button>
-									</div>
-
-								</div>
-								<br>
-								<div class="row">
-									<div class="col-2"><img src="img/avatar.png" class="img-fluid rounded-circle"></div>
-									<div class="col-6">abcdrfgh</div> 
-
-									<div class="col-2">
-										<button class="btn btn-primary btn-sm"><i class="fas fa-check"></i></button>
-									</div>
-									<div class="col-2">
-										<button class="btn btn-default btn-sm"><i class="fas fa-times"></i></button>
-									</div>
-
-								</div>
-								<br>
-								<div class="row">
-									<div class="col-2"><img src="img/avatar.png" class="img-fluid rounded-circle"></div>
-									<div class="col-6">Ác Nhân Cóc 97</div> 
-
-									<div class="col-2">
-										<button class="btn btn-primary btn-sm"><i class="fas fa-check"></i></button>
-									</div>
-									<div class="col-2">
-										<button class="btn btn-default btn-sm"><i class="fas fa-times"></i></button>
-									</div>
-
-								</div>
-							</a>
-
+					<div id="addfriendshow" class="bg-info border shadow-sm p-3" style="position:absolute; display: none; bottom: -205px; left: -100px; width: 500px;">
+					<div class="list-group">
+						<a href="#" class="list-group-item list-group-item-action">
+							<div class=""><img src="img/avatar.png" alt="" width="50px"></div>
+							<div class=""><a href="#">Xuân Trường</a></div>
+						</a>
+						<a href="#" class="list-group-item list-group-item-action">Second item</a>
+						<a href="#" class="list-group-item list-group-item-action">Third item</a>
 						</div>
 					</div>
 				</li>
@@ -144,7 +109,7 @@
 						<div class="dropdown-menu">
 							<a class="dropdown-item" href="#"><i class="fas fa-user"></i>Thông tin tài khoản</a>
 							<a class="dropdown-item" href="#"><i class="fas fa-cog"></i> Cài đặt</a>
-							<a class="dropdown-item" href="{{route('logout')}}"><i class="fas fa-sign-out-alt"></i>Logout</a>
+							<a class="dropdown-item" href="{{route('Logout')}}"><i class="fas fa-sign-out-alt"></i>Logout</a>
 						</div>
 					</li> 
 				</ul>
@@ -193,6 +158,7 @@
 					<a href="#" class="list-group-item list-group-item-action pl-5 rounded-0"><i class="fas fa-pen"></i> Gửi góp ý</a>
 
 				</span>
+				<a href="{{route('Logout')}}" class="list-group-item list-group-item-action"><i class="fas fa-home"></i> Đăng xuất</a>
 			</div>
 		</div>
 	</div>

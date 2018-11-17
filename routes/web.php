@@ -26,7 +26,7 @@ Route::post('register','UserController@PostRegister')->name('PostRegister');
 // Trang chu cua website
 Route::get('home','UserController@ViewHome')->name('ViewHome');
 // Dang xuat tai khoan
-Route::get('logout','UserController@logout')->name('logout');
+Route::get('logout','UserController@logout')->name('Logout');
 // Dang tai mot bai viet len newfeed
 Route::post('upstt','UserController@upstt')->name('UpStt');
 // Dang tai binh luan mot bai viet

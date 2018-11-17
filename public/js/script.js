@@ -2,12 +2,8 @@ $(document).ready(function(){
 
     $('[data-toggle="tooltip"]').tooltip();   
     
-    $("#showmap").hide();
-    $("#showscooter").hide();
-    $("#showbus").hide();
-    $("#showcar").hide();
-    $("#showaccount").hide();
-    $("#showGopY").hide();
+ 
+    
      $("#mapm").click(function(){
         $("#showmap").slideToggle();
         $("#showscooter").slideUp();
@@ -59,12 +55,26 @@ $(document).ready(function(){
         $("#showcar").slideUp();
         $("#showaccount").slideUp();
         $("#showmap").slideUp();
+        
     });
 
-    $("#addfriendshow").hide();
+    
     $("#addfriendbtn").click(function(){
         $("#addfriendshow").slideToggle();
+        $("#addmessageshow").slideUp();
+        $("#addShowThongBao").slideUp();
     })
+    $("#addMessagebtn").click(function(){
+        $("#addmessageshow").slideToggle();
+         $("#addfriendshow").slideUp();
+         $("#addShowThongBao").slideUp();
+    })
+    $("#btnThongBao").click(function(){
+        $("#addShowThongBao").slideToggle();
+          $("#addfriendshow").slideUp();
+          $("#addmessageshow").slideUp();
+    })
+
 
     
     $(document).ready(function(){

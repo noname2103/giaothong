@@ -29,13 +29,13 @@
 					<div class="list-group">
 						<a href="{{route('ViewHome')}}" class="list-group-item list-group-item-action"><i class="fas fa-home"></i> Trang chủ</a>
 						<a class="list-group-item list-group-item-action" id="account"><i class="fas fa-id-badge"></i> Trang cá nhân</a>
-						<span id="showaccount" class="rounded-0">
+						<span id="showaccount" class="rounded-0" style="display: none">
 							<a href="#" class="list-group-item list-group-item-action pl-5 rounded-0"><i class="fas fa-search"></i> Xem trang</a>
 							<a href="#" class="list-group-item list-group-item-action pl-5 rounded-0 border-bottom-0"><i class="fas fa-users"></i> Tạo nhóm</a>
 							<a href="#" class="list-group-item list-group-item-action pl-5 rounded-0 border-bottom-0"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
 						</span>
 						<span  class="list-group-item list-group-item-action" id="mapm"><i class="fas fa-map"></i> Bản đồ</span>
-						<span id="showmap" class="rounded-0">
+						<span id="showmap" class="rounded-0" style="display: none">
 						
 							<a href="{{route('ViewMap')}}" class="list-group-item list-group-item-action pl-5 rounded-0"><i class="fas fa-search"></i> Xem bản đồ</a>
 							<a id="pingtraffic" class="list-group-item list-group-item-action pl-5 rounded-0 border-bottom-0"><i class="fas fa-map-pin"></i> Ping kẹt xe</a>
@@ -60,14 +60,14 @@
 							});
 						</script>
 						<a class="list-group-item list-group-item-action" id="car"><i class="fas fa-car"></i> Xe ô tô</a>
-						<span id="showcar" class="rounded-0">
+						<span id="showcar" class="rounded-0" style="display: none">
 							<a href="#" class="list-group-item list-group-item-action pl-5 rounded-0"><i class="fas fa-street-view"></i> Thi bằng lái</a>
 							<a href="#" class="list-group-item list-group-item-action pl-5 rounded-0"><i class="fas fa-book"></i>
 							Tài liệu</a>
 							
 						</span>
 						<a class="list-group-item list-group-item-action" id="scooter"><i class="fas fa-motorcycle"></i> Xe máy</a>
-						<span id="showscooter" class="rounded-0">
+						<span id="showscooter" class="rounded-0" style="display: none">
 							<a href="#" class="list-group-item list-group-item-action pl-5 rounded-0"><i class="fas fa-street-view"></i> Thi bằng lái</a>
 							<a href="#" class="list-group-item list-group-item-action pl-5 rounded-0 border-bottom-0"><i class="fas fa-map-marker-alt"></i> Ping kẹt xe</a>
 							<a href="#" class="list-group-item list-group-item-action pl-5 rounded-0"><i class="fas fa-book"></i>
@@ -76,13 +76,13 @@
 						</span>
 
 						<a class="list-group-item list-group-item-action" id="bus"><i class="fas fa-bus-alt"></i> Xe buýt</a>
-						<span id="showbus" class="rounded-0"> 
+						<span id="showbus" class="rounded-0" style="display: none"> 
 							<a href="#" class="list-group-item list-group-item-action pl-5 rounded-0 border-bottom-0"><i class="fas fa-search-location"></i> Tra cứu</a>
 							<a href="#" class="list-group-item list-group-item-action pl-5 rounded-0 border-bottom-0"><i class="fas fa-map-marker-alt"></i></i> Tìm đường</a>
 							<a href="#" class="list-group-item list-group-item-action pl-5 rounded-0 border-bottom-0"><i class="fas fa-info-circle"></i> Báo cáo xe</a>
 						</span>
 						<a class="list-group-item list-group-item-action" id="GopY"><i class="fas fa-edit"></i> Góp ý</a>
-						<span id="showGopY" class="rounded-0"> 
+						<span id="showGopY" class="rounded-0" style="display: none"> 
 							<a href="#" class="list-group-item list-group-item-action pl-5 rounded-0 border-bottom-0"><i class="fas fa-question-circle"></i> Giới thiệu</a>
 							<a href="#" class="list-group-item list-group-item-action pl-5 rounded-0 border-bottom-0"><i class="fas fa-pen"></i> Gửi góp ý</a>
 							

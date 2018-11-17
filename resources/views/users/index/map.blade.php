@@ -27,7 +27,8 @@
 
             var marker = new google.maps.Marker({
                 position:{lat:lat,lng:lon},
-                map:map
+                map:map,
+                animation:google.maps.Animation.BOUNCE
             });
             @foreach($pingtraffic as $pt)
             var cityCircle = new google.maps.Circle({

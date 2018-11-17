@@ -90,10 +90,10 @@
 			</div>
 	@yield('content')
 
-<div class="city bot">
+<div class="city bot d-none d-sm-none d-md-block">
 
 </div>
-<div class="road bot">
+<div class="road bot d-none d-sm-none d-md-block">
 	<div  class="moto"><img src="img/moto.png" width="30px" alt="Xe mo to"></div>
 	<div  class="moto2"><img src="img/moto2.png" width="45px" alt=""></div>
 	<div  class="car"><img src="img/car2.png" width="70px" alt=""></div>

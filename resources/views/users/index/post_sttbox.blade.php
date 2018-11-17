@@ -17,7 +17,7 @@
 									<img src="img/avatar.png" width="38px" class="rounded-circle img-fluid">
 								</div>
 								<div class="col-md-10 col-sm-10 col-10 pl-0 ">
-									<textarea class="w-100 pl-0 pr-3 pt-3 pb-3" id="status" placeholder="Bạn đang nghĩ gì vậy?" rows="1" onkeyup="getVal();" name="contentstt"></textarea>
+									<textarea class="w-100 pl-0 pr-3 pt-3 pb-3" id="status" placeholder="Bạn có cần giúp đỡ không?" rows="1" onkeyup="getVal();" name="contentstt"></textarea>
 									<div id="googleMap"></div>
 								</div>
 							</div>
@@ -25,10 +25,10 @@
 								<input type="text" id="lat" name="lat" style="display:none">
 								<input type="text" id="lon" name="lon" style="display:none">
 								<input type="file" id="file" name="imagestatus" style="display:none">
-								<div class="col-3 bg-white rounded ml-1 border p-1"><label for="file" class="btn btn-primary w-100 mb-0"><i class="fas fa-image"></i> Ảnh/video</label></div>
-								<div class="col-2 bg-white rounded ml-1 border p-1"><span class="btn btn-primary w-100" id="btn-add-position"><i class="fas fa-map-marker-alt"></i> Vị trí</span></div>
-								<div class="col-3 bg-white rounded ml-1 border p-1"><span class="btn btn-primary w-100"><i class="fa fa-tag"></i> Gắn thẻ</span></div>
-								<div class="col-3 rounded ml-1  p-0 align-self-center pl-3"><input type="submit" class="btn btn-primary w-100 h-100 align-middle shadow-sm" value="Đăng bài"></div>
+								<div class="col-lg-3 col-2 bg-white rounded ml-1 border p-1"><label for="file" class="btn btn-primary w-100 mb-0"><i class="fas fa-image"></i><span class="d-none d-lg-inline"> Ảnh/video</span></label></div>
+								<div class="col-lg-2 col-2 bg-white rounded ml-1 border p-1"><span class="btn btn-primary w-100" id="btn-add-position"><i class="fas fa-map-marker-alt"></i><span class="d-none d-lg-inline"> Vị trí</span></span></div>
+								<div class="col-lg-3 col-2 bg-white rounded ml-1 border p-1"><span class="btn btn-primary w-100"><i class="fa fa-tag"></i><span class="d-none d-lg-inline"> Gắn thẻ</span></span></div>
+								<div class="col-lg-3 col-5 rounded ml-1  p-0 align-self-center pl-3"><input type="submit" class="btn btn-primary w-100 h-100 align-middle shadow-sm" value="Đăng bài"></div>
 							</div>
 						</div>
 	</form>

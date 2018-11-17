@@ -37,4 +37,6 @@ Route::get('map','UserController@ViewMap')->name('ViewMap');
 Route::get('pingtraffic{lat}/{lon}','UserController@PingTraffic')->name('PingTraffic');
 // Tra cuu tuyen xe buyt
 Route::get('bussearch','UserController@BusSearch')->name('BusSearch');
+// Danh gia mot bai viet 
+Route::get('confirm{idstt}/{conf}','UserController@Confirm')->name('Confirm');
 

@@ -23,10 +23,10 @@
 								<div class="col-6">Xuân Trường</div> 
 							
 									<div class="col-2">
-										<button class="btn btn-primary"><i class="fas fa-check"></i></button>
+										<button class="btn btn-primary btn-sm"><i class="fas fa-check"></i></button>
 									</div>
 									<div class="col-2">
-										<button class="btn btn-default"><i class="fas fa-times"></i></button>
+										<button class="btn btn-default btn-sm"><i class="fas fa-times"></i></button>
 									</div>
 							
 							</div>
@@ -36,10 +36,10 @@
 								<div class="col-6">abcdrfgh</div> 
 							
 									<div class="col-2">
-										<button class="btn btn-primary"><i class="fas fa-check"></i></button>
+										<button class="btn btn-primary btn-sm"><i class="fas fa-check"></i></button>
 									</div>
 									<div class="col-2">
-										<button class="btn btn-default"><i class="fas fa-times"></i></button>
+										<button class="btn btn-default btn-sm"><i class="fas fa-times"></i></button>
 									</div>
 							
 							</div>
@@ -49,10 +49,10 @@
 								<div class="col-6">Ác Nhân Cóc 97</div> 
 							
 									<div class="col-2">
-										<button class="btn btn-primary"><i class="fas fa-check"></i></button>
+										<button class="btn btn-primary btn-sm"><i class="fas fa-check"></i></button>
 									</div>
 									<div class="col-2">
-										<button class="btn btn-default"><i class="fas fa-times"></i></button>
+										<button class="btn btn-default btn-sm"><i class="fas fa-times"></i></button>
 									</div>
 							
 							</div>
@@ -128,8 +128,8 @@
 						<span> Trường<span>
 						</a>
 						<div class="dropdown-menu">
-							<a class="dropdown-item" href="#">Link 1</a>
-							<a class="dropdown-item" href="#">Link 2</a>
+							<a class="dropdown-item" href="#"><i class="fas fa-user"></i>Thông tin tài khoản</a>
+							<a class="dropdown-item" href="#"><i class="fas fa-cog"></i> Cài đặt</a>
 							<a class="dropdown-item" href="{{route('logout')}}"><i class="fas fa-sign-out-alt"></i>Logout</a>
 						</div>
 					</li> 

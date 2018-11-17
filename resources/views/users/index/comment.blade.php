@@ -1,3 +1,4 @@
+@foreach($comment as $cmt)
 <div class="row mt-2 pr-3">
 										<div class="col-2 pr-1">
 											<img src="img/avatar.png" class="img-thumbnail w-90 rounded">
@@ -15,9 +16,10 @@
 
 											<div class="row ">
 												<div class="col-12 text-justify pr-2">
-													<span>Chào mừng các bạn đến với hội thi olympic tin học Hutech, đây là một sân chơi lớn với hi vọng tìm ra đội tuyển xuất sắc nhất để tham dự các kỳ thi sắp tới. </span>
+													<span>{{$cmt->content}}Chào mừng các bạn đến với hội thi olympic tin học Hutech, đây là một sân chơi lớn với hi vọng tìm ra đội tuyển xuất sắc nhất để tham dự các kỳ thi sắp tới. </span>
 												</div>
 											</div>
 
 										</div>
 									</div>
+@endforeach

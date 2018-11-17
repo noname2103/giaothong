@@ -31,4 +31,6 @@ Route::get('logout','UserController@logout')->name('logout');
 Route::post('upstt','UserController@upstt')->name('UpStt');
 // Dang tai binh luan mot bai viet
 Route::post('postcomment{IdStatus}','UserController@PostComment')->name('PostComment');
+// Xem ban do
+Route::get('map','UserController@ViewMap')->name('ViewMap');
 

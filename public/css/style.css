@@ -217,32 +217,7 @@ body{
 /**
  * Create the pill to click
  */
- .checkboxThree label {
 
-    width: 13px;
-    height: 13px;
-    border-radius: 50px;
- 
-    -webkit-transition: all .5s ease;
-    -moz-transition: all .5s ease;
-    -o-transition: all .5s ease;
-    -ms-transition: all .5s ease;
-    transition: all .5s ease;
-    cursor: pointer;
-    position: absolute;
-    top: 3px;
-    z-index: 1;
-    left: 5px;
-    background: #ddd;
-}
- 
-/**
- * Create the checkbox event for the label
- */
-.checkboxThree input[type=checkbox]:checked + label {
-    left: 20px;
-    background: #26ca28;
-}
 
 .shipper{
     position: absolute;

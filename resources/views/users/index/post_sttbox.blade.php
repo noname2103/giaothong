@@ -2,7 +2,7 @@
 	<form action="{{route('UpStt')}}" method="post" enctype="multipart/form-data">
 	{{ csrf_field() }}
 					<div class="row border-bottom mr-1 ml-1">
-						<div class="col-4 col-sm-4 border-right p-1 pl-2 text-center">
+						<div class="col-5 col-sm-5 col-lg-4 border-right p-1 pl-2 text-center">
 							<a href="" class=""><i class="	far fa-edit"></i> Đăng bài viết</a>
 						</div>
 								<!-- <div class="col-5 col-sm-5 border-right p-1 pl-2 text-center">

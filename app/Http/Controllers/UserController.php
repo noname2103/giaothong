@@ -126,6 +126,12 @@ class UserController extends Controller
     //Dang tai mot comment vao bai viet
     public function PostComment($IdStatus)
     {
-        return view('users.index.comment');
+        // return view('users.index.comment');
+        return "Hello".$IdStatus;
+    }
+    //Trang xem ban do
+    public function ViewMap()
+    {
+        return view('users.index.map');
     }
 }

@@ -1,6 +1,6 @@
 <!-- Thanh navbar  -->
 <nav class="navbar navbar-expand-md bg-info navbar-dark shadow-sm fixed-top p-1">
-	<div class="container">
+	<div class="container ml-lg-5 pl-lg-5">
 
 		<!-- Toggler/collapsibe Button -->
 		<span class=" d-sm-block d-md-none">GT</span>

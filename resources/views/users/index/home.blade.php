@@ -28,8 +28,8 @@
 								
 								@if($stt->author == $at->id)
 								<div  style="position: relavtive">
-								<a href="" id="authorname{{$at->id}}">{{$at->username}}</a><br>
-								<div id="authorshow{{$at->id}}" class="bg-light rounded shadow-sm border p-3" style="position: absolute; top: -100px; left: 0px;display: none;">
+								<a href="" id="authorname{{$stt->id}}">{{$at->username}}</a><br>
+								<div id="authorshow{{$stt->id}}" class="bg-light rounded shadow-sm border p-3" style="position: absolute; top: -100px; left: 0px;display: none;">
 									<div class="row">
 										<div class="col-3">
 											<img src="img/avatar.png" alt="" class="img-fluid">
@@ -38,21 +38,32 @@
 											<span>{{$at->username}}</span>
 										</div>
 										<div class="col-4">
-											<span class="btn btn-primary">Kết bạn</span>
+											<span class="btn btn-primary addfriendbtn{{$at->id}}" >Kết bạn</span>
 										</div>
 									</div>
 								</div>
 								</div>
 								<script>
-								$("#authorname{{$at->id}}").mouseenter(function(){
-									$("#authorshow{{$at->id}}").show();
+
+								$("#authorname{{$stt->id}}").mouseenter(function(){
+									$("#authorshow{{$stt->id}}").show();
 								});
 
-								$("#authorname{{$at->id}}").mouseleave(function(){
-									$("#authorshow{{$at->id}}").mouseleave(function(){
-									$("#authorshow{{$at->id}}").hide();
+								$("#authorname{{$stt->id}}").mouseleave(function(){
+									$("#authorshow{{$stt->id}}").mouseleave(function(){
+									$("#authorshow{{$stt->id}}").hide();
+									});
 								});
-								});
+								$(".addfriendbtn{{$at->id}}").click(function(){
+									$.get("addfriend{{$at->id}}",
+									function(data){
+										alert(data);
+										//alert(data);
+										//$("#danhgiabtn{{$stt->id}}").html("<i class='fas fa-grin-hearts fa-lg text-success'></i><span class='text-success font-weight-bold'> Rất hay</span>");
+										//$("#comment{{$stt->id}}").prepend(data);
+									});
+									//alert("Đã gửi lời mời kết bạn!");
+								})
 								</script>
 								@endif
 								

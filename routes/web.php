@@ -39,4 +39,6 @@ Route::get('pingtraffic{lat}/{lon}','UserController@PingTraffic')->name('PingTra
 Route::get('bussearch','UserController@BusSearch')->name('BusSearch');
 // Danh gia mot bai viet 
 Route::get('confirm{idstt}/{conf}','UserController@Confirm')->name('Confirm');
+// Ket ban voi mot nguoi
+Route::get('addfriend{idfriend}','UserController@AddFriend')->name('AddFriend');
 

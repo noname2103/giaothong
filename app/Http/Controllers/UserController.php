@@ -10,6 +10,7 @@ use App\Status;
 use App\Comment;
 use App\Ptraffic;
 use App\Reviews;
+use App\Friend;
 
 class UserController extends Controller
 {
@@ -218,10 +219,21 @@ class UserController extends Controller
         // }
             
 
-        $check = Reviews::where([
-            ['iduser','=',session('iduser')],
-    		['idstt','=',$idstt],
-        ])->first();
+        // $check = Reviews::where([
+        //     ['iduser','=',session('iduser')],
+    	// 	['idstt','=',$idstt],
+        // ])->get();
+        // if($conf == 'good')
+        // {
+        //     $check->rate = ($check->rate + 100)/2;
+        // }
+        // else
+        // {
+        //     if($conf== 'normal')
+        //         $check->rate = ($check->rate + 50)/2;
+        //     else
+        //         $check->rate = ($check->rate + 0)/2;
+        // }
 
         if(!empty($check))
         {
@@ -238,5 +250,15 @@ class UserController extends Controller
         $db->save();
 
         return 0;
+    }
+    public function AddFriend($idfriend)
+    {
+        $db = new Friend;
+        $db->iduser1 = session('iduser');
+        $db->iduser2 = $idfriend;
+        $db->friend = 0; 
+        $db->save();
+
+        return "Đã gửi lời mời kết bạn!";
     }
 }

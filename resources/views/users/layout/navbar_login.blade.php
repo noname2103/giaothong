@@ -13,14 +13,14 @@
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="notification">
-		<div class="list-group mt-2 d-block d-sm-block d-md-none">
-		<a class="list-group-item list-group-item-action account"><i class="fas fa-id-badge"></i> Trang cá nhân</a>
+			<div class="list-group mt-2 d-block d-sm-block d-md-none">
+				<a class="list-group-item list-group-item-action account"><i class="fas fa-id-badge"></i> Trang cá nhân</a>
 				<span  class="rounded-0 showaccount" style="display: none">
 					<a href="#" class="list-group-item list-group-item-action pl-5 rounded-0"><i class="fas fa-search"></i> Xem trang</a>
 					<a href="#" class="list-group-item list-group-item-action pl-5 rounded-0 border-bottom-0"><i class="fas fa-users"></i> Tạo nhóm</a>
 					<a href="#" class="list-group-item list-group-item-action pl-5 rounded-0 border-bottom-0"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
 				</span>
-		</div>
+			</div>
 		</div>
 		<div class="collapse navbar-collapse" id="Delete">
 			<ul class="navbar-nav row justify-content-between w-100">
@@ -149,7 +149,7 @@
 					</li> 
 				</ul>
 			</div>
-			</div>
+		</div>
 		<!-- Navbar links -->
 		<div class="collapse navbar-collapse" id="collapsibleNavbar">
 			

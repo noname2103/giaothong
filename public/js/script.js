@@ -86,7 +86,24 @@ $(document).ready(function(){
             //});
         });
     });
+    $("#pingtraffic").click(function(){
+        // if(navigator.geolocation){
+        // 	var nav = navigator.geolocation;
+        // 	var pos = nav.getCurrentPosition(showPosition);
 
+        // 	function showPosition(position)
+        // 	{
+        // 		var lat = position.coords.latitude;
+        // 		var lon = position.coords.longitude;
+                    
+        // 		$.get("pingtraffic"+lat+"/"+lon,
+        // 		function(data){
+        // 			alert(data);
+        // 		});
+        // 	}
+        // }
+        alert(1);
+    });
     $("#btn-add-position").click(function(){
     	if(navigator.geolocation){
     		$("#googleMap").css({"width": "100%", "height": "200px", "margin-bottom": "10px"});

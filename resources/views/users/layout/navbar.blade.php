@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0irDdchNMM2Gnz3aGqfTuPm6zKvImS64"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0irDdchNMM2Gnz3aGqfTuPm6zKvImS64&libraries=places&callback=initMap"></script>
 
 </head>
 <body>
@@ -38,10 +38,10 @@
 						<span class="rounded-0 showmap" style="display: none">
 						
 							<a href="{{route('ViewMap')}}" class="list-group-item list-group-item-action pl-5 rounded-0"><i class="fas fa-search"></i> Xem bản đồ</a>
-							<a id="pingtraffic" class="list-group-item list-group-item-action pl-5 rounded-0 border-bottom-0"><i class="fas fa-map-pin"></i> Ping kẹt xe</a>
+							<a class="pingtraffic list-group-item list-group-item-action pl-5 rounded-0 border-bottom-0"><i class="fas fa-map-pin"></i> Ping kẹt xe</a>
 						</span>
 						<script>
-							$("#pingtraffic").click(function(){
+							$(".pingtraffic").click(function(){
 								if(navigator.geolocation){
 									var nav = navigator.geolocation;
 									var pos = nav.getCurrentPosition(showPosition);
@@ -50,7 +50,7 @@
 									{
 										var lat = position.coords.latitude;
 										var lon = position.coords.longitude;
-
+											
 										$.get("pingtraffic"+lat+"/"+lon,
 										function(data){
 											alert(data);

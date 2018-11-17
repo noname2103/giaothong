@@ -35,6 +35,7 @@ class UserController extends Controller
         if(!empty($login))
         {
             session()->put('iduser',$login->id);
+            session()->put('username',$login->username);
             session()->put('email',$login->email);
     		session()->put('password',$login->password);
     		return redirect()->route('ViewHome');
@@ -139,7 +140,9 @@ class UserController extends Controller
         $db->time = date('d-m-Y H:i:s');
         $db->save();
 
-        $user = Users::where('id',session('iduser'));
+        $authorname = session('username');
+
+        
         //return view('users.index.comment');
         $comment = "
         <div class='row mt-2 pr-3'>
@@ -149,8 +152,8 @@ class UserController extends Controller
         <div class='col-10 pr-4 w-100 pb-1 bg-light border rounded  comment-content'>
             <div class='row justify-content-between'>
                 <div class='col-10 col-sm-10 col-lg-11'>
-                    <a href='' class='name-in-comment'>XUAN TRUONG </a>:
-                    <span class='text-secondary time-of-comment'> 1 giờ trước <i class='fa fa-clock-o'></i></span>
+                    <a href='' class='name-in-comment'>".$authorname." </a>:
+                    <span class='text-secondary time-of-comment'> Vừa xong. <i class='fa fa-clock-o'></i></span>
                 </div>
                 <div class='col-1 col-sm-1 col-lg-1 align-self-end'>
                     <i class='fa fa-ellipsis-h align-middle'></i>

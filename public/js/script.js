@@ -4,58 +4,58 @@ $(document).ready(function(){
     
  
     
-     $("#mapm").click(function(){
-        $("#showmap").slideToggle();
-        $("#showscooter").slideUp();
-        $("#showbus").slideUp();
-        $("#showcar").slideUp();
-        $("#showaccount").slideUp();
-         $("#showGopY").slideUp();
+     $(".mapm").click(function(){
+        $(".showmap").slideToggle();
+        $(".showscooter").slideUp();
+        $(".showbus").slideUp();
+        $(".showcar").slideUp();
+        $(".showaccount").slideUp();
+         $(".showGopY").slideUp();
     });
-    $("#scooter").click(function(){
-        $("#showscooter").slideToggle();
-        $("#showmap").slideUp();
-        $("#showbus").slideUp();
-        $("#showcar").slideUp();
-        $("#showaccount").slideUp();
-        $("#showaccount").slideUp();
-         $("#showGopY").slideUp();
-    });
-
-    $("#bus").click(function(){
-        $("#showbus").slideToggle();
-        $("#showmap").slideUp();
-        $("#showscooter").slideUp();
-        $("#showcar").slideUp();
-        $("#showaccount").slideUp();
-         $("#showGopY").slideUp();
+    $(".scooter").click(function(){
+        $(".showscooter").slideToggle();
+        $(".showmap").slideUp();
+        $(".showbus").slideUp();
+        $(".showcar").slideUp();
+        $(".showaccount").slideUp();
+        $(".showaccount").slideUp();
+         $(".showGopY").slideUp();
     });
 
-    $("#car").click(function(){
-        $("#showcar").slideToggle();
-        $("#showmap").slideUp();
-        $("#showbus").slideUp();
-        $("#showscooter").slideUp();
-        $("#showaccount").slideUp();
-         $("#showGopY").slideUp();
+    $(".bus").click(function(){
+        $(".showbus").slideToggle();
+        $(".showmap").slideUp();
+        $(".showscooter").slideUp();
+        $(".showcar").slideUp();
+        $(".showaccount").slideUp();
+         $(".showGopY").slideUp();
     });
 
-     $("#account").click(function(){
-        $("#showaccount").slideToggle();
-        $("#showscooter").slideUp();
-        $("#showbus").slideUp();
-        $("#showcar").slideUp();
-        $("#showmap").slideUp();
-        $("#showGopY").slideUp();
+    $(".Car").click(function(){
+        $(".showcar").slideToggle();
+        $(".showmap").slideUp();
+        $(".showbus").slideUp();
+        $(".showscooter").slideUp();
+        $(".showaccount").slideUp();
+         $(".showGopY").slideUp();
     });
 
-      $("#GopY").click(function(){
-        $("#showGopY").slideToggle();
-        $("#showscooter").slideUp();
-        $("#showbus").slideUp();
-        $("#showcar").slideUp();
-        $("#showaccount").slideUp();
-        $("#showmap").slideUp();
+     $(".account").click(function(){
+        $(".showaccount").slideToggle();
+        $(".showscooter").slideUp();
+        $(".showbus").slideUp();
+        $(".showcar").slideUp();
+        $(".showmap").slideUp();
+        $(".showGopY").slideUp();
+    });
+
+      $(".GopY").click(function(){
+        $(".showGopY").slideToggle();
+        $(".showscooter").slideUp();
+        $(".showbus").slideUp();
+        $(".showcar").slideUp();
+        $(".showaccount").slideUp();
+        $(".showmap").slideUp();
         
     });
 

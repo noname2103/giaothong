@@ -22,7 +22,7 @@ $(document).ready(function(){
          $("#showGopY").slideUp();
     });
 
-    $(".bus").click(function(){
+    $("#bus").click(function(){
         $("#showbus").slideToggle();
         $("#showmap").slideUp();
         $("#showscooter").slideUp();

@@ -278,63 +278,8 @@
 										<div class="col-10 pr-4 w-100 pb-1 bg-light border rounded  comment-content">
 											<div class="row justify-content-between">
 												<div class="col-10 col-sm-10 col-lg-11">
-													<a href="" class="name-in-comment">
-													@foreach($author as $at)
-														@if($at->id == $cmt->author)
-															{{$at->username}}
-														@endif
-													@endforeach
-													</a>:
-													<span class="text-secondary time-of-comment"><?php
-
-														$hour = substr($cmt->time,11,2);
-														$hourNow = date('H');
-														$day = substr($cmt->time,0,2);
-														$dayNow = date('d');
-														$month = substr($cmt->time,3,2);
-														$monthNow = date('m');
-														$year = substr($cmt->time,6,4);
-														$yearNow = date('Y');
-														if($hour == $hourNow && $day == $dayNow && $month == $monthNow && $year == $yearNow)
-														{
-															$minute = substr($cmt->time,14,2);
-															$minuteNow = date('i');
-															if($minuteNow - $minute == 0)
-																echo "Vừa xong";
-															else
-															{
-																$lastMinute = $minuteNow - $minute;
-																echo $lastMinute." phút trước";
-															}
-														}
-														else
-														{
-															if($day == $dayNow && $month == $monthNow && $year == $yearNow)
-															{
-																$lastHour = $hourNow - $hour;
-																echo $lastHour." giờ trước";
-															}
-															else
-															{
-																if($month == $monthNow && $year == $yearNow)
-																{
-																	$lastday = $dayNow - $day;
-																	if($lastday == 1)
-																	{
-																		$minutetomorrow = substr($cmt->time,11,5);
-																		echo $minutetomorrow." hôm qua";
-																	}
-																		
-																	else
-																	echo $cmt->time;
-
-																}
-																else
-																	echo $cmt->time;
-															}
-														}
-
-														?> <i class="fa fa-clock-o"></i></span>
+													<a href="" class="name-in-comment">Xuân Trường </a>:
+													<span class="text-secondary time-of-comment"> {{$cmt->time}} <i class="fa fa-clock-o"></i></span>
 												</div>
 												<div class="col-1 col-sm-1 col-lg-1 align-self-end">
 													<i class="fa fa-ellipsis-h align-middle"></i>

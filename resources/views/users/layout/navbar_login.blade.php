@@ -6,10 +6,7 @@
 			<span class=" d-sm-block d-md-none">GT</span>
 			<span class="fas fa-user-plus fa-lg d-sm-block d-md-none"></span>
 			<span class="fas fa-comment-dots fa-lg d-sm-block d-md-none"></span>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#notification">
 			<span class="fas fa-globe-americas fa-lg d-sm-block d-md-none"></span>
-		</button>
-
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 			<span class="navbar-toggler-icon"></span>
 			
@@ -142,17 +139,6 @@
 				</ul>
 			</div>
 			</div>
-
-		<div class="collapse navbar-collapse" id="notification">
-			<div class="list-group mt-2 d-block d-sm-block d-md-none">
-				<a  class="list-group-item list-group-item-action" id="mapm"><i class="fas fa-map"></i> Bản đồ</a>
-					<span id="showmap" class="rounded-0" style="display: none">
-					
-						<a href="{{route('ViewMap')}}" class="list-group-item list-group-item-action pl-5 rounded-0"><i class="fas fa-search"></i> Xem bản đồ</a>
-						<a id="pingtraffic" class="list-group-item list-group-item-action pl-5 rounded-0 border-bottom-0"><i class="fas fa-map-pin"></i> Ping kẹt xe</a>
-					</span>
-			</div>
-		</div>
 		<!-- Navbar links -->
 		<div class="collapse navbar-collapse" id="collapsibleNavbar">
 			

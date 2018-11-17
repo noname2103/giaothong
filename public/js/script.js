@@ -112,7 +112,18 @@ $(document).ready(function(){
 				var marker = new google.maps.Marker({
 					position:{lat:lat,lng:lon},
 					map:map
-				});
+                });
+                
+                var cityCircle = new google.maps.Circle({
+                    strokeColor: '#FF0000',
+                    strokeOpacity: 0.8,
+                    strokeWeight: 0,
+                    fillColor: '#FF0000',
+                    fillOpacity: 0.35,
+                    map: map,
+                    center: {lat:lat, lng:lon},
+                    radius: Math.sqrt(40) * 10
+                  });
             }
         }
     });

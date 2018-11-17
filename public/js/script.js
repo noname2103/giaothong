@@ -76,6 +76,39 @@ $(document).ready(function(){
           $("#addmessageshow").slideUp();
     })
 
+    $("#btnThemBan").click(function(){
+        $("#addFriend").slideToggle();
+        $("#notification").slideUp();
+        $("#addMessage").slideUp();
+        $("#collapsibleNavbar").slideUp();
+
+    })
+
+    $("#btnNotification").click(function(){
+        $("#notification").slideToggle();
+        $("#addFriend").slideUp();
+        $("#addMessage").slideUp();
+        $("#collapsibleNavbar").slideUp();
+
+    })
+
+      $("#btnMessage").click(function(){
+        $("#addMessage").slideToggle();
+        $("#addFriend").slideUp();
+        $("#notification").slideUp();
+        $("#collapsibleNavbar").slideUp();
+
+    })
+
+      $("#btnCollap").click(function(){
+        $("#collapsibleNavbar").slideToggle();
+        $("#addFriend").slideUp();
+        $("#notification").slideUp();
+        $("#addMessage").slideUp();
+
+    })
+
+
 
     
     $(document).ready(function(){

@@ -4,24 +4,131 @@
 
 		<!-- Toggler/collapsibe Button -->
 		<span class=" d-sm-block d-md-none">GT</span>
-		<span class="fas fa-user-plus fa-lg d-sm-block d-md-none"></span>
-		<span class="fas fa-comment-dots fa-lg d-sm-block d-md-none"></span>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#notification">
+		
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#addFriend" id="btnThemBan">
+			<span class="fas fa-user-plus fa-lg d-sm-block d-md-none"></span>
+		</button>
+
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#addMessage" id="btnMessage">
+			<span class="fas fa-comment-dots fa-lg d-sm-block d-md-none"></span>
+		</button>
+
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#notification" id="btnNotification">
 			<span class="fas fa-globe-americas fa-lg d-sm-block d-md-none"></span>
 		</button>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" id="btnCollap">
 			<span class="navbar-toggler-icon"></span>
 		</button>
+
+
+
+		<!-- xu ly button tin nhan -->
+		<div class="collapse navbar-collapse" id="addMessage">
+		<div class="list-group mt-2 d-block d-sm-block d-md-none">
+			<div class="list-group">
+							<a href="#" class="list-group-item list-group-item-action">
+								<div class="row">
+									<div class="col-2"><img src="img/avatar.png" class="img-fluid rounded-circle"></div>
+									<div class="col-6">Xuân Trường</div>
+									<div class="col-4">
+										<p>noi dung tin nhan</p>	
+									</div> 
+
+
+								</div>
+								<br>
+								<div class="row">
+									<div class="col-2"><img src="img/avatar.png" class="img-fluid rounded-circle"></div>
+									<div class="col-6">Ác Nhân Cóc 97</div> 
+									<div class="col-4">
+										<p>noi dung tin nhan</p>	
+									</div> 
+
+								</div>
+							</a>
+
+						</div>
+		</div>
+		</div>
+		<!-- ket thuc xu ly btntinnhan -->
+
+		<!-- xu ly button addFriend -->
+		<div class="collapse navbar-collapse" id="addFriend">
+		<div class="list-group mt-2 d-block d-sm-block d-md-none">
+			<div class="list-group">
+							<a href="#" class="list-group-item list-group-item-action">
+								<div class="row">
+									<div class="col-2"><img src="img/avatar.png" class="img-fluid rounded-circle"></div>
+									<div class="col-6">Xuân Trường</div> 
+
+									<div class="col-2">
+										<button class="btn btn-primary btn-sm"><i class="fas fa-check"></i></button>
+									</div>
+									<div class="col-2">
+										<button class="btn btn-default btn-sm"><i class="fas fa-times"></i></button>
+									</div>
+
+								</div>
+								<br>
+								<div class="row">
+									<div class="col-2"><img src="img/avatar.png" class="img-fluid rounded-circle"></div>
+									<div class="col-6">abcdrfgh</div> 
+
+									<div class="col-2">
+										<button class="btn btn-primary btn-sm"><i class="fas fa-check"></i></button>
+									</div>
+									<div class="col-2">
+										<button class="btn btn-default btn-sm"><i class="fas fa-times"></i></button>
+									</div>
+
+								</div>
+								<br>
+								<div class="row">
+									<div class="col-2"><img src="img/avatar.png" class="img-fluid rounded-circle"></div>
+									<div class="col-6">Ác Nhân Cóc 97</div> 
+
+									<div class="col-2">
+										<button class="btn btn-primary btn-sm"><i class="fas fa-check"></i></button>
+									</div>
+									<div class="col-2">
+										<button class="btn btn-default btn-sm"><i class="fas fa-times"></i></button>
+									</div>
+
+								</div>
+							</a>
+
+						</div>
+		</div>
+		</div>
+		<!-- ket thuc xu ly btnaddFriend -->
+
+		<!-- xu ly button notification -->
 		<div class="collapse navbar-collapse" id="notification">
 		<div class="list-group mt-2 d-block d-sm-block d-md-none">
-		<a class="list-group-item list-group-item-action account"><i class="fas fa-id-badge"></i> Trang cá nhân</a>
-				<span  class="rounded-0 showaccount" style="display: none">
-					<a href="#" class="list-group-item list-group-item-action pl-5 rounded-0"><i class="fas fa-search"></i> Xem trang</a>
-					<a href="#" class="list-group-item list-group-item-action pl-5 rounded-0 border-bottom-0"><i class="fas fa-users"></i> Tạo nhóm</a>
-					<a href="#" class="list-group-item list-group-item-action pl-5 rounded-0 border-bottom-0"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
-				</span>
+		
+				<div class="list-group">
+							<a href="#" class="list-group-item list-group-item-action">
+								<div class="row">
+									<div class="col-2"><img src="img/avatar.png" class="img-fluid rounded-circle"></div>
+									<div class="col-4">Xuân Trường</div>
+									<div class="col-6">
+										<p>noi dung tin nhan dasdadasdasdasdasdas</p>	
+									</div> 		
+								</div>
+								<br>
+								<div class="row">
+									<div class="col-2"><img src="img/avatar.png" class="img-fluid rounded-circle"></div>
+									<div class="col-4">Xuân Trường</div>
+									<div class="col-6">
+										<p>noi dung tin nhan dasdadasdasdasdasdas</p>	
+									</div> 		
+								</div>
+							</a>
+
+						</div>
 		</div>
 		</div>
+		<!-- ket thuc xu ly button notification -->
 		<div class="collapse navbar-collapse" id="Delete">
 			<ul class="navbar-nav row justify-content-between w-100">
 				<li class="col-2 nav-item">

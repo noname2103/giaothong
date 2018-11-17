@@ -112,7 +112,18 @@ $(document).ready(function(){
 				var marker = new google.maps.Marker({
 					position:{lat:lat,lng:lon},
 					map:map
-				});
+                });
+                
+                var cityCircle = new google.maps.Circle({
+                    strokeColor: '#FF0000',
+                    strokeOpacity: 0.8,
+                    strokeWeight: 0,
+                    fillColor: '#FF0000',
+                    fillOpacity: 0.35,
+                    map: map,
+                    center: {lat:lat, lng:lon},
+                    radius: Math.sqrt(40) * 10
+                  });
             }
         }
     });
@@ -141,21 +152,12 @@ $(document).ready(function(){
         }
     });
 
-    // $("#googleMapStatus").css({"width": "100%", "height": "200px", "margin-bottom": "10px"});
-    // var mapDiv = document.getElementById('googleMapStatus');
-									
-	// 								var lat = 10.855991;
-	// 								var lon = 106.78440479999999;
-	// 								var options = { 
-	// 									zoom:17,
-	// 									center:{lat:lat,lng:lon}
-	// 								}
-	// 								var map=new google.maps.Map(mapDiv, options);
-
-	// 								var marker = new google.maps.Marker({
-	// 									position:{lat:lat,lng:lon},
-	// 									map:map
-	// 								});
+    $("#busnumber").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#busshow div").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+    });
 
 
 });

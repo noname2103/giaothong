@@ -69,6 +69,7 @@ class UserController extends Controller
         $db = new Users;
         $db->username = $username;
         $db->email = $email;
+        $db->avatar = 'avatar.png';
         $db->password = $password;
         $db->save();
 
@@ -171,6 +172,14 @@ class UserController extends Controller
     public function ViewMap()
     {
         $pingtraffic = Ptraffic::all();
+        // $hour = substr($->time,11,2);
+        // $hourNow = date('H');
+        // $day = substr($cmt->time,0,2);
+        // $dayNow = date('d');
+        // $month = substr($cmt->time,3,2);
+        // $monthNow = date('m');
+        // $year = substr($cmt->time,6,4);
+        // $yearNow = date('Y');
         return view('users.index.map',['pingtraffic'=>$pingtraffic]);
     }
     // Ping ket xe

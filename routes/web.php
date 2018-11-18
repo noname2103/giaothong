@@ -41,4 +41,6 @@ Route::get('bussearch','UserController@BusSearch')->name('BusSearch');
 Route::get('confirm{idstt}/{conf}','UserController@Confirm')->name('Confirm');
 // Ket ban voi mot nguoi
 Route::get('addfriend{idfriend}','UserController@AddFriend')->name('AddFriend');
+// Hien ra cac loi moi ket ban
+//Route::get('showaddfriend''UserController@AddFriend')
 

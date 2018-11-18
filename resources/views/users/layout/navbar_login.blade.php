@@ -30,13 +30,15 @@
 				<li class="col-1 nav-item align-self-center" style="position:relative;">
 					<i class="fas fa-user-plus fa-2x align-middle" id="addfriendbtn"></i>	
 					<div id="addfriendshow" class="bg-info border shadow-sm p-3" style="position:absolute; display: none; bottom: -205px; left: -100px; width: 500px;">
-					<div class="list-group">
-						<a href="#" class="list-group-item list-group-item-action">
-							<div class=""><img src="img/avatar.png" alt="" width="50px"></div>
-							<div class=""><a href="#">Xuân Trường</a></div>
-						</a>
-						<a href="#" class="list-group-item list-group-item-action">Second item</a>
-						<a href="#" class="list-group-item list-group-item-action">Third item</a>
+						<div class="list-group">
+							<span href="#" class="list-group-item list-group-item-action">123
+								<!-- <div class="col-2"><img src="img/avatar.png" alt="" width="50px"></div>
+								<div class="col-4"><a href="#">Xuân Trường</a></div>
+								<div class="col-2 align-self-center"><a href="#" class="btn btn-success align-middle">Chấp nhận</a></div>
+								<div class="col-2 align-self-center"><a href="#" class="btn btn-danger">Từ chối</a></div> -->
+							</span>
+							<a href="#" class="list-group-item list-group-item-action">Second item</a>
+							<a href="#" class="list-group-item list-group-item-action">Third item</a>
 						</div>
 					</div>
 				</li>

@@ -3,8 +3,19 @@
 @section('content')
 <!-- <div id="googleMap" style="width:100%;height:400px;"></div> -->
 
-
-			<div class="mt-5 pt-4 col-12 col-md-12 col-sm-12 col-lg-6 newfeed ml-sm-0 ml-md-0 shadow-sm" style="background-color: rgba(255, 255, 255, 0.5);">
+<!-- <div class="shadow-sm border" style="position: fixed; bottom: 0px; right: 50px; z-index: 9999 !important; width: 250px;">
+	<div class="row bg-primary rounded-top p-2">
+		<div class="col-8">Xuân Trường</div>
+	</div>
+	<div class="row bg-white" style="height: 300px;">
+		
+	</div>
+	<div class="row">
+		<input type="text" class="w-100 p-1">
+	</div>
+</div>  -->
+<div id="chatbox"></div>
+			<div class="mt-5 pt-4 col-12 col-md-7 col-sm-12 col-lg-6 newfeed ml-sm-0 ml-md-0 shadow-sm" style="background-color: rgba(255, 255, 255, 0.5);">
 				
 				@if(!empty(session('iduser')))
 				@include('users.index.post_sttbox')
@@ -39,7 +50,7 @@
 										</div>
 										@if($at->id != session('iduser'))
 											<div class="col-4">
-												<span class="btn btn-primary addfriendbtn{{$at->id}}" >Kết bạn</span>
+												<span class="btn btn-primary" id="chat{{$at->id}}" >Nhắn tin</span>
 											</div>
 										@endif
 									</div>
@@ -56,15 +67,16 @@
 									$("#authorshow{{$stt->id}}").hide();
 									});
 								});
-								$(".addfriendbtn{{$at->id}}").click(function(){
-									$.get("addfriend{{$at->id}}",
+								$("#chat{{$at->id}}").click(function(){
+									$.get("chat{{$at->id}}",
 									function(data){
-										alert(data);
+										$("#chatbox").html(data);
+										//alert(data);
 										//alert(data);
 										//$("#danhgiabtn{{$stt->id}}").html("<i class='fas fa-grin-hearts fa-lg text-success'></i><span class='text-success font-weight-bold'> Rất hay</span>");
 										//$("#comment{{$stt->id}}").prepend(data);
 									});
-									//alert("Đã gửi lời mời kết bạn!");
+									// alert("Đã gửi lời mời kết bạn!");
 								})
 								</script>
 								@endif
@@ -290,7 +302,7 @@
 										</div>
 										<div class="col-10 pr-4 w-100 pb-1 bg-light border rounded  comment-content">
 											<div class="row justify-content-between">
-												<div class="col-10 col-sm-10 col-lg-11">
+												<div class="col-10 col-sm-10 col-lg-10">
 													<a href="" class="name-in-comment">
 														@foreach($author as $at)
 															@if($at->id == $cmt->author)
@@ -349,7 +361,7 @@
 
 														?> <i class="fa fa-clock-o"></i></span>
 												</div>
-												<div class="col-1 col-sm-1 col-lg-1 align-self-end">
+												<div class="col-1 col-sm-1 col-lg-2 align-self-end">
 													<i class="fa fa-ellipsis-h align-middle"></i>
 												</div>
 											</div>

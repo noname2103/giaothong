@@ -15,12 +15,12 @@
   <div id="busshow">
     <div class="bg-light rounded row shadow-sm border p-2 m-0 mb-1">
         <div class="col-3 p-0 align-self-center"><img src="img/busimg.jpg" alt="" class="img-fluid"></div>
-        <div class="col-6"><a href="">Xe buýt số 125</a><br>Hoạt động: 9:30 - 7:40<br>Bến Thành - BX. Miền Đông</div>
+        <div class="col-6"><a href="">Xe buýt số 125</a><br>Hoạt động: 9:30 - 17:40<br>Bến Thành - BX. Miền Đông</div>
         <div class="col-3 align-self-center"><a href="" class="btn btn-primary align-middle">Chi tiết</a></div>
     </div>
     <div class="bg-light rounded row shadow-sm border p-2 m-0 mb-1">
         <div class="col-3 p-0 align-self-center"><img src="img/busimg.jpg" alt="" class="img-fluid"></div>
-        <div class="col-6"><a href="">Xe buýt số 843</a><br>Hoạt động: 9:30 - 7:40<br>Bến Thành - BX. Miền Đông</div>
+        <div class="col-6"><a href="">Xe buýt số 843</a><br>Hoạt động: 4:30 - 15:15<br>Bến Thành - BX. Miền Đông</div>
         <div class="col-3 align-self-center"><a href="" class="btn btn-primary align-middle">Chi tiết</a></div>
     </div>
 </div>

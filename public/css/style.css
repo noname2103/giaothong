@@ -246,8 +246,8 @@ body{
     border-top-width: .0625rem !important;
     border-bottom-width: calc(.2rem + .0625rem) !important;
 }
-@media screen and (max-width: 480px) {
+/* @media screen and (max-width: 480px) {
     body {
         font-size: 12px !important;
     }
-}
+} */

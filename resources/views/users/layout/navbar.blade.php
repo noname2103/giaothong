@@ -24,7 +24,7 @@
 <div class="body">
 	<div class="container">
 		<div class="row">
-			<div class="mt-5 pt-4 col-lg-2 col-sm-0 position-fixed d-none d-sm-none d-xl-block">
+			<div class="mt-5 pt-4 col-lg-2 col-md-4 col-sm-0 position-fixed d-none d-sm-none d-lg-block d-xl-block">
 				<div class="bg-info rounded shadow-sm border p-2">
 					<div class="list-group">
 						<a href="{{route('ViewHome')}}" class="list-group-item list-group-item-action"><i class="fas fa-home"></i> Trang chủ</a>

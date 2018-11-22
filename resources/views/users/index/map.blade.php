@@ -7,7 +7,7 @@
     </div>
     <script type="text/javascript">
     if(navigator.geolocation){
-        $('#Map').css({'width': '100%', 'height': '500px', 'margin-bottom': '10px'});
+        $('#Map').css({'width': '100%', 'height': '470px', 'margin-bottom': '10px'});
         var mapDiv = document.getElementById('Map');
         var nav = navigator.geolocation;
         var pos = nav.getCurrentPosition(showPosition);

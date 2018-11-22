@@ -261,4 +261,29 @@ class UserController extends Controller
 
         return "Đã gửi lời mời kết bạn!";
     }
+    public function Chat($iduser1)
+    {
+        return "<div id='chatboxv".$iduser1."".session('iduser')."' class='shadow-sm border' style='position: fixed; bottom: 0px; right: 50px; z-index: 9999 !important; width: 250px;'>
+        <div class='row bg-primary rounded-top p-2'>
+            <div class='col-10'>Xuân Trường</div>
+            <div class='col-1'><i class='fas fa-times' id='close".$iduser1."".session('iduser')."'></i></div>
+        </div>
+        <div class='row bg-white' style='height: 300px;'>
+            
+        </div>
+        <div class='row'>
+            <input type='text' id='inboxchat".session('iduser')."'class='w-100 p-1'>
+        </div>
+    </div> 
+    <script>
+    $('#close".$iduser1."".session('iduser')."').click(function(){
+        $('#chatboxv".$iduser1."".session('iduser')."').hide();
+    });
+    $('#inboxchat".session('iduser')."').keypress(function(event){
+        if(event.keyCode == 13 || event.which == 13)
+        {
+        }
+    </script>
+    ";
+    }
 }

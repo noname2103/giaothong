@@ -3,10 +3,14 @@
 	<div class="container ml-lg-5 pl-lg-5">
 
 		<!-- Toggler/collapsibe Button -->
-		<span class=" d-sm-block d-md-none">GT</span>
-		<span class="fas fa-user-plus fa-lg d-sm-block d-md-none"></span>
-		<span class="fas fa-comment-dots fa-lg d-sm-block d-md-none"></span>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#notification">
+		<span class=" d-sm-block d-md-none"><img src="img/logo.png" width="60px" alt=""></span>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#notification" style="border: none !important">
+			<span class="fas fa-user-plus fa-lg d-sm-block d-md-none"></span>
+		</button>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#notification" style="border: none !important">
+			<span class="fas fa-comment-dots fa-lg d-sm-block d-md-none"></span>
+		</button>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#notification" style="border: none !important">
 			<span class="fas fa-globe-americas fa-lg d-sm-block d-md-none"></span>
 		</button>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
